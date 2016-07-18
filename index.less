@@ -1,6 +1,12 @@
 @sans: "Helvetica Neue", Helvetica, Arial, sans-serif; 
 @serif: Georgia, Times, "Times New Roman", serif;
 
+body {
+  max-width:900px;
+}
+html {
+  background-color:#eee !important;
+}
 html,
 body {
   min-height: 100vh;
@@ -9,7 +15,6 @@ html body {
   font-family:      @serif;
   line-height:       1.2;
   text-color:       #0D040F ;
-  background-color: #eee;
   text-align:        left;
   padding-left:      1em;
   padding-right:     1em;
@@ -63,9 +68,6 @@ img.float-left {
   float:left; 
   margin: 1em, 0;
 }
-.sidebar { 
-  text-align: left;
-}
 figure.image.half {
   transform: scale(0.5);
 }
@@ -84,7 +86,7 @@ figure.image{
   margin-top: 0em;
 }
 .byline:before{ 
-  content: "By:"; 
+  content: "by:"; 
   font-weight:bold; 
 }
 .byline {
@@ -103,11 +105,21 @@ figure.image{
   margin-top: 0em;
   font-weight: lighter;
 }
+ul,li {
+
+}
+ol,li {
+
+}
 .flush-left{
   margin-left: 0;
 }
 .flush-right{
   margin-right:0;
+}
+
+.sidebar { 
+  text-align: left;
 }
 .dropcap {
   float: left;
@@ -117,10 +129,12 @@ figure.image{
   line-height: .75;
 }
 .pullquote {
-  position: relative;
-  text-align: center;
+  position: ;
+  text-align: ;
   font-size: 1.5em;
   line-height: 1.5;
+  max-width: 34.375em;
+  display: ;
 }
 .credit {
   color: grey;
@@ -132,11 +146,6 @@ figure.image{
   font-size: .9em;
 }
 .citation {
-  font-size: 1em;
-  color: grey;
-  margin-top: 1.5em;
-  border-radius: 10px;
-  margin-bottom: 1.5em;
   font-style: italic;
 }
 .section-start{
