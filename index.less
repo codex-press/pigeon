@@ -1,49 +1,73 @@
 @sans: "Helvetica Neue", Helvetica, Arial, sans-serif; 
 @serif: Georgia, Times, "Times New Roman", serif;
-
-@media (max-width: 700px) { html{ font-size: 2.618; } }
-
-body {
-  max-width:900px;  
-  background-color:#eee !important;  
-  margin:auto;
+/* add 4-5  breakpoints with arrying font-size  */
+@media (max-width: 700px) { 
+  html {
+    font-size:48px !important;
+  }
+}
+@media (max-width: 900px) { 
+  html {
+    font-size: 12px !important;
+  }
+}
+@media (max-width: 1440px) { 
+  html {
+    font-size: 18px !important;
+  }
+}
+@media (max-width: 1920px) { 
+  html {
+    font-size: 22px !important;
+  }
 }
 html {
-  background-color:#eee !important;
+  background-color: #eee !important;
 }
 html,
 body {
   min-height: 100vh;
 }
-html body {
-  font-family:      @serif;
-  line-height:       1.2;
-  text-color:       #0D040F ;
-  text-align:        center;
-  padding-left:      1em;
-  padding-right:     1em;
-  margin:auto;
+body {
+  max-width: 900px;  
+  background-color: #eee !important;  
+  margin: auto;
 }
+html body {
+  font-family: @serif;
+  line-height: 1.2;
+  text-color: #0D040F ;
+  text-align: center;
+  padding-left: 1em;
+  padding-right: 1em;
+  margin: auto;
+}
+
+/* headers */
 h1 { 
   font-size: 2.618em; 
 }
+
 h2 { 
   font-size: 1.618em; 
 }
+
 h3 { 
   font-size: 1.000em; 
 }     
+
 h4 { 
   font-size: 0.618em; 
 }   
-h1.xl { 
-  font-size: 4.236em; 
+
+.xl {
+  font-size: 1.520em;
 }
-h1.xxl { 
-  font-size: 6.854em; 
+
+.xxl {
+  font-size: 2.350em;
 }
-   .xl { font-size: 2em; }
-   .xxl { font-size: 3em; }
+
 p {
   text-align: left;
   line-height: 1.5;
@@ -54,31 +78,8 @@ a {
   color: #260631;
   font-weight: bold; 
 }
-blockquote {
-  font: @serif;
-  font-style: italic;  
-  padding-left: .7em;
-  padding-top: 1.2em;
-  padding-bottom: 1.4em;
-  border-left: 2px solid grey;
-  text-indent: .5em;
-  max-width: 600px;
-  margin: auto;
-  text-align: center;
-}
-img.float-right {
-  float:right; 
-  margin: 1em, 0;
-}
-img.float-left {
-  float:left; 
-  margin: 1em, 0;
-}
-figure.image.half {
-  transform: scale(0.5);
-}
-figure.image{
-}
+
+/* article head  */
 .headline { 
   font-family: @sans;
   font-variant: bold;
@@ -111,6 +112,8 @@ figure.image{
   margin-top: 0em;
   font-weight: lighter;
 }
+
+/* lists  */
 ol {
   text-align: left;
   max-width: 600px;
@@ -137,20 +140,8 @@ ul {
   font-family: "Times New Roman", @serif;
   font-size: 1.12em;
 }
-  ul li:before {
-    font-size: 1.12em;
-    margin-right: 10px;
-}
-.flush-left{
-  margin-left: 0;
-}
-.flush-right{
-  margin-right:0;
-}
 
-.sidebar { 
-  text-align: left;
-}
+/* article body elements  */
 .dropcap {
   float: left;
   font-size: 6em;
@@ -162,6 +153,18 @@ ul {
   margin-right: 0;
   font-size: 1.2em;
   line-height: 1.5;
+}
+blockquote {
+  font: @serif;
+  font-style: italic;  
+  padding-left: .7em;
+  padding-top: 1.2em;
+  padding-bottom: 1.4em;
+  border-left: 2px solid grey;
+  text-indent: .5em;
+  max-width: 600px;
+  margin: auto;
+  text-align: center;
 }
 .credit {
   color: grey;
@@ -177,6 +180,79 @@ ul {
 }
 .section-start{
   margin-top: 4em;
+}
+
+/* sidebar  */
+.sidebar { 
+  float: right;
+  margin: 20px;
+  margin-right: 0;
+  text-align: left;
+  display: block;
+  border: 2px solid grey; 
+  max-width: 300px;
+  font-size: .8em;
+  padding: 10px;  
+}
+.right {
+  margin-right: 0;
+}
+.left {
+  margin-left: 0;
+}
+.justify{
+  text-align: justify;
+}  
+.italic {
+  font-style: italic;
+}
+.sidebar-sans { 
+  font-family: @sans;
+}
+.sidebar-left { 
+  text-align: left;
+  display: block;
+  border: 2px solid grey; 
+  max-width: 300px;
+  font-size: .8em;
+  margin: auto;
+  padding: 9px;
+  text-align: left;  
+
+
+}
+.sidebar-right { 
+  margin-right: 0;
+  text-align: left;
+  display: block;
+  border: 2px solid grey; 
+  max-width: 300px;
+  font-size: .8em;
+  padding: 9px;
+  text-align: left;  
+
+}
+/* floats */
+.flush-left{
+  margin-left: 0;
+}
+.flush-right{
+  margin-right:0;
+}
+img.float-left {
+  float:left; 
+  margin: 1em, 0;
+}
+img.float-right {
+  float:right; 
+  margin: 1em, 0;
+}
+
+/* images */
+figure.image.half {
+  transform: scale(0.5);
+}
+figure.image{
 }
 /*
   background:linear-gradient(to right, #D2FF43  0%, #0DD6FF 80%);
