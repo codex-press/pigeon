@@ -1,8 +1,12 @@
 @sans: "Helvetica Neue", Helvetica, Arial, sans-serif; 
 @serif: Georgia, Times, "Times New Roman", serif;
 
+@media (max-width: 700px) { html{ font-size: 2.618; } }
+
 body {
-  max-width:900px;
+  max-width:900px;  
+  background-color:#eee !important;  
+  margin:auto;
 }
 html {
   background-color:#eee !important;
@@ -15,9 +19,10 @@ html body {
   font-family:      @serif;
   line-height:       1.2;
   text-color:       #0D040F ;
-  text-align:        left;
+  text-align:        center;
   padding-left:      1em;
   padding-right:     1em;
+  margin:auto;
 }
 h1 { 
   font-size: 2.618em; 
@@ -39,8 +44,8 @@ h1.xxl {
 }
    .xl { font-size: 2em; }
    .xxl { font-size: 3em; }
-p { 
-  text-align: justify;
+p {
+  text-align: left;
   line-height: 1.5;
   margin: 1.5em auto;
   max-width: 600px;
@@ -55,10 +60,11 @@ blockquote {
   padding-left: .7em;
   padding-top: 1.2em;
   padding-bottom: 1.4em;
-  padding-right: 10px;
   border-left: 2px solid grey;
-  margin: .2em;
   text-indent: .5em;
+  max-width: 600px;
+  margin: auto;
+  text-align: center;
 }
 img.float-right {
   float:right; 
@@ -105,11 +111,35 @@ figure.image{
   margin-top: 0em;
   font-weight: lighter;
 }
-ul,li {
-
+ol {
+  text-align: left;
+  max-width: 600px;
+  margin: auto;
+  padding: 0;
+  counter-reset: item;
+  list-style: none;
 }
-ol,li {
-
+  ol li {
+    counter-increment: item;
+  }
+  ol li:before {
+    font-family: Times, "Times New Roman", serif;
+    font-size: 1.12em;
+    margin-right: 10px;
+    content: counter(item) '.';
+    display: inline-block;
+  }
+ul {
+  text-align: left;
+  max-width: 600px; 
+  margin: auto;
+  padding: 0 0 0 1em ; 
+  font-family: "Times New Roman", @serif;
+  font-size: 1.12em;
+}
+  ul li:before {
+    font-size: 1.12em;
+    margin-right: 10px;
 }
 .flush-left{
   margin-left: 0;
@@ -129,12 +159,9 @@ ol,li {
   line-height: .75;
 }
 .pullquote {
-  position: ;
-  text-align: ;
-  font-size: 1.5em;
+  margin-right: 0;
+  font-size: 1.2em;
   line-height: 1.5;
-  max-width: 34.375em;
-  display: ;
 }
 .credit {
   color: grey;
