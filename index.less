@@ -1,26 +1,16 @@
 @sans: "Helvetica Neue", Helvetica, Arial, sans-serif; 
 @serif: Georgia, Times, "Times New Roman", serif;
-/* add 4-5  breakpoints with arrying font-size  */
-@media (max-width: 700px) { 
-  html {
-    font-size:48px !important;
-  }
-}
-@media (max-width: 900px) { 
-  html {
-    font-size: 12px !important;
-  }
-}
-@media (max-width: 1440px) { 
-  html {
-    font-size: 18px !important;
-  }
-}
-@media (max-width: 1920px) { 
-  html {
-    font-size: 22px !important;
-  }
-}
+
+@mobile:      ~"only screen and (max-width: 529px)";
+@tablet:      ~"only screen and (min-width: 530px) and (max-width: 949px)";
+@desktop:     ~"only screen and (min-width: 950px) and (max-width: 1128px)";
+@desktop-xl:  ~"only screen and (min-width: 1129px)";
+
+@media @mobile     { html { font-size: 15px; } }
+@media @tablet     { html { font-size: 16px; } }
+@media @desktop    { html { font-size: 18px; } }
+@media @desktop-xl { html { font-size: 20px; } }
+
 html {
   background-color: #eee !important;
 }
@@ -29,7 +19,7 @@ body {
   min-height: 100vh;
 }
 body {
-  max-width: 900px;  
+  max-width: 1200px;  
   background-color: #eee !important;  
   margin: auto;
 }
@@ -45,28 +35,26 @@ html body {
 
 /* headers */
 h1 { 
-  font-size: 2.618em; 
+  font-size: 2.618em;
+  font-family: @sans;
+  margin-bottom: 0em;
+  line-height: 1.1em;
 }
 
 h2 { 
   font-size: 1.618em; 
+_ font-family: @sans;
+  font-weight: normal;
 }
-
 h3 { 
   font-size: 1.000em; 
+_ font-family: @sans;
 }     
 
 h4 { 
   font-size: 0.618em; 
+_ font-family: @sans;
 }   
-
-.xl {
-  font-size: 1.520em;
-}
-
-.xxl {
-  font-size: 2.350em;
-}
 
 p {
   text-align: left;
@@ -82,38 +70,36 @@ a {
 /* article head  */
 .headline { 
   font-family: @sans;
-  font-variant: bold;
   font-size: 3em;
-  margin-bottom: 0em ;
+  margin-bottom: 0em;
+  text-align: left;
 }
 .subheading {
+  text-align: left;
   font-family: @sans;
-  font-style: italic;
   margin-bottom: .5em;
   margin-top: 0em;
 }
 .byline:before{ 
-  content: "by:"; 
+  content: "By "; 
   font-weight:bold; 
 }
 .byline {
+  text-align: left;
   font-family: sans-serif;
   margin-bottom: .5em;
   margin-top: 0em;
   font-weight: lighter;
 }
-.date:before {
-  content:"published on:"; 
-  font-weight:bold; 
-}
 .date {
+  text-align: left;
   font-family: @sans;
   margin-bottom: .5em;
   margin-top: 0em;
   font-weight: lighter;
 }
 
-/* lists  */
+/* lists charts */
 ol {
   text-align: left;
   max-width: 600px;
@@ -150,9 +136,12 @@ ul {
   line-height: .75;
 }
 .pullquote {
-  margin-right: 0;
+  padding: .2em;
+  margin: 0em 0 0 0em;
   font-size: 1.2em;
   line-height: 1.5;
+  max-width: 600px;
+  float: right;
 }
 blockquote {
   font: @serif;
@@ -185,14 +174,23 @@ blockquote {
 /* sidebar  */
 .sidebar { 
   float: right;
-  margin: 20px;
+  margin-left: 10px; 
   margin-right: 0;
   text-align: left;
   display: block;
   border: 2px solid grey; 
-  max-width: 300px;
+  width: 270px;
   font-size: .8em;
   padding: 10px;  
+  font-family: @sans;
+}
+
+/* recyclable elements  */
+.xl {
+  font-size: 1.520em;
+}
+.xxl {
+  font-size: 2.350em;
 }
 .right {
   margin-right: 0;
@@ -200,45 +198,33 @@ blockquote {
 .left {
   margin-left: 0;
 }
-.justify{
-  text-align: justify;
-}  
-.italic {
-  font-style: italic;
-}
-.sidebar-sans { 
-  font-family: @sans;
-}
-.sidebar-left { 
-  text-align: left;
-  display: block;
-  border: 2px solid grey; 
-  max-width: 300px;
-  font-size: .8em;
-  margin: auto;
-  padding: 9px;
-  text-align: left;  
-
-
-}
-.sidebar-right { 
-  margin-right: 0;
-  text-align: left;
-  display: block;
-  border: 2px solid grey; 
-  max-width: 300px;
-  font-size: .8em;
-  padding: 9px;
-  text-align: left;  
-
-}
-/* floats */
 .flush-left{
   margin-left: 0;
 }
 .flush-right{
   margin-right:0;
 }
+.justify{
+  text-align: justify;
+}  
+.italic {
+  font-style: italic;
+}
+.serif {
+  font-family: @serif;
+}
+.sans {
+  font-family: @sans;
+}
+.float-left {
+  float: left;
+}
+.float-right {
+  float: right
+}
+
+ /* floats */
+
 img.float-left {
   float:left; 
   margin: 1em, 0;
