@@ -38,22 +38,21 @@ h1 {
   font-size: 2.618em;
   font-family: @sans;
   margin-bottom: 0em;
-  line-height: 1.1em;
 }
 
 h2 { 
   font-size: 1.618em; 
-_ font-family: @sans;
+  font-family: @sans;
   font-weight: normal;
 }
 h3 { 
   font-size: 1.000em; 
-_ font-family: @sans;
+  font-family: @sans;
 }     
 
 h4 { 
   font-size: 0.618em; 
-_ font-family: @sans;
+  font-family: @sans;
 }   
 
 p {
@@ -62,44 +61,51 @@ p {
   margin: 1.5em auto;
   max-width: 600px;
 }
+
 a {
   color: #260631;
   font-weight: bold; 
 }
-
+a:hover {
+  color: green;
+}
+a:visited {
+  color: grey;
+}
 /* article head  */
 .headline { 
   font-family: @sans;
   font-size: 3em;
-  margin-bottom: 0em;
-  text-align: left;
+  margin-bottom: 0em ;
 }
+
 .subheading {
-  text-align: left;
   font-family: @sans;
   margin-bottom: .5em;
   margin-top: 0em;
 }
+
 .byline:before{ 
-  content: "By "; 
+  content: "By:"; 
   font-weight:bold; 
 }
 .byline {
-  text-align: left;
   font-family: sans-serif;
   margin-bottom: .5em;
   margin-top: 0em;
   font-weight: lighter;
 }
+
 .date {
-  text-align: left;
   font-family: @sans;
   margin-bottom: .5em;
   margin-top: 0em;
   font-weight: lighter;
 }
 
+
 /* lists charts */
+
 ol {
   text-align: left;
   max-width: 600px;
@@ -108,16 +114,18 @@ ol {
   counter-reset: item;
   list-style: none;
 }
-  ol li {
-    counter-increment: item;
-  }
-  ol li:before {
-    font-family: Times, "Times New Roman", serif;
-    font-size: 1.12em;
-    margin-right: 10px;
-    content: counter(item) '.';
-    display: inline-block;
-  }
+ol li {
+  counter-increment: item;
+}
+
+ol li:before {
+  font-family: Times, "Times New Roman", serif;
+  font-size: 1.12em;
+  margin-right: 10px;
+  content: counter(item) '.';
+  display: inline-block;
+}
+
 ul {
   text-align: left;
   max-width: 600px; 
@@ -127,7 +135,9 @@ ul {
   font-size: 1.12em;
 }
 
+
 /* article body elements  */
+
 .dropcap {
   float: left;
   font-size: 6em;
@@ -135,6 +145,7 @@ ul {
   display: inline-block;
   line-height: .75;
 }
+
 .pullquote {
   padding: .2em;
   margin: 0em 0 0 0em;
@@ -143,6 +154,7 @@ ul {
   max-width: 600px;
   float: right;
 }
+
 blockquote {
   font: @serif;
   font-style: italic;  
@@ -155,23 +167,29 @@ blockquote {
   margin: auto;
   text-align: center;
 }
+
 .credit {
   color: grey;
   font-size: .9em;
   text-transform: uppercase;
 }
+
 .caption {
   color: grey;
   font-size: .9em;
 }
+
 .citation {
   font-style: italic;
 }
+
 .section-start{
   margin-top: 4em;
 }
 
+
 /* sidebar  */
+
 .sidebar { 
   float: right;
   margin-left: 10px; 
@@ -185,7 +203,9 @@ blockquote {
   font-family: @sans;
 }
 
+
 /* recyclable elements  */
+
 .xl {
   font-size: 1.520em;
 }
@@ -223,13 +243,15 @@ blockquote {
   float: right
 }
 
+
  /* floats */
 
-img.float-left {
+.float-left {
   float:left; 
   margin: 1em, 0;
 }
-img.float-right {
+
+.float-right {
   float:right; 
   margin: 1em, 0;
 }
@@ -238,6 +260,7 @@ img.float-right {
 figure.image.half {
   transform: scale(0.5);
 }
+
 figure.image{
 }
 /*
