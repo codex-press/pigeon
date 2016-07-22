@@ -1,0 +1,84 @@
+@sans: "Helvetica Neue", Helvetica, Arial, sans-serif; 
+@serif: Georgia, Times, "Times New Roman", serif;
+
+@mobile:      ~"only screen and (max-width: 529px)";
+@tablet:      ~"only screen and (min-width: 530px) and (max-width: 949px)";
+@desktop:     ~"only screen and (min-width: 950px) and (max-width: 1128px)";
+@desktop-xl:  ~"only screen and (min-width: 1129px)";
+
+@media @mobile     { html { font-size: 15px; } }
+@media @tablet     { html { font-size: 16px; } }
+@media @desktop    { html { font-size: 18px; } }
+@media @desktop-xl { html { font-size: 20px; } }
+
+html,
+body {
+  min-height: 100vh;
+}
+
+.section-start{
+  margin-top: 4em;
+}
+
+/* recyclable elements  */
+
+.xl {
+  font-size: 1.520em;
+}
+
+.xxl {
+  font-size: 2.350em;
+}
+
+.right {
+  margin-right: 0;
+}
+
+.left {
+  margin-left: 0;
+}
+
+.flush-left {
+  margin-left: 0;
+}
+
+.flush-right {
+  margin-right:0;
+}
+
+.justify {
+  text-align: justify;
+}  
+
+.italic {
+  font-style: italic;
+}
+
+.serif {
+  font-family: @serif;
+}
+
+.sans {
+  font-family: @sans;
+}
+
+.float-left {
+  float: left;
+}
+
+.float-right {
+  float: right
+}
+
+ /* floats */
+
+.float-left {
+  float:left; 
+  margin: 1em, 0;
+}
+
+.float-right {
+  float:right; 
+  margin: 1em, 0;
+}
+
