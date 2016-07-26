@@ -159,13 +159,14 @@ ul {
     width: 400px;
     float: right;
   }
-  .pullquote.left {
+}
+/*  .pullquote.left {
     margin: 0 2em 1em 1em;
     width: 400px;
     float: left;
   }
 }
-
+*/
 // moves to full width at <700px
 @media (max-width: 700px) {
   .pullquote {
@@ -175,7 +176,6 @@ ul {
     margin: 0 auto;
   }
 }
-
 
 blockquote {
   font: @serif;
@@ -188,6 +188,7 @@ blockquote {
   max-width: 600px;
   margin: auto;
   text-align: center;
+  margin-left: 20.5%;
 }
 
 .credit {
@@ -246,18 +247,7 @@ blockquote {
 .xxl {
   font-size: 2.350em;
 }
-.right {
-  margin-right: 0;
-}
-.left {
-  margin-left: 0;
-}
-.flush-left{
-  margin-left: 0;
-}
-.flush-right{
-  margin-right:0;
-}
+
 .justify{
   text-align: justify;
 }  
@@ -353,15 +343,25 @@ p {
     width: 40%; 
   }
 }
+/*
+.left {
+  margin-left: 0;
+}
+.right {
+  margin-right: 0;
+}
+*/
 
-.left p {
+.left {
   float: left;
   margin-left: 10%;
+  width:  40%;
 }
 
-.right p {
+.right {
   float: right;
   margin-left: 10%;
+  width:  40%;
 }
 
 
