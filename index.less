@@ -15,14 +15,13 @@
 
 
 html {
-  background-color: #eee !importanti;
+  background-color: #eee !important;
 }
 html,
 body {
   min-height: 100vh;
 } 
 body {
-  max-width: 1200px;  
   background-color: #eee !important;  
   margin: auto;
 }
@@ -31,11 +30,13 @@ html body {
   line-height: 1.2;
   text-color: #0D040F ;
   text-align: center;
-  padding-left: 1em;
-  padding-right: 1em;
   margin: auto;
 }
 
+body p {
+  padding-left: 1em;
+  padding-right: 1em;
+}
 /* headers */
 h1 { 
   font-size: 2.618em;
@@ -57,14 +58,6 @@ h4 {
   font-size: 0.618em; 
   font-family: @sans;
 }   
-
-p {
-  text-align: left;
-  line-height: 1.5;
-  margin: 1.5em auto;
-  max-width: 600px;
-}
-
 /* links  */
 
 a {
@@ -117,6 +110,8 @@ ol {
   padding: 0;
   counter-reset: item;
   list-style: none;
+  padding-left: 1em;
+  padding-right: 1em;
 }
 
 ol li {
@@ -138,6 +133,8 @@ ul {
   padding: 0 0 0 1em ; 
   font-family: "Times New Roman", @serif;
   font-size: 1.12em;
+  padding-left: 2em;
+  padding-right: 1em;
 }
 
 
@@ -290,16 +287,82 @@ blockquote {
 
 .float-right {
   float:right; 
-  margin: 1em, 0;
 }
 
 /* images */
-figure.image.half {
-  transform: scale(0.5);
+figure.image {
+  width:  100%;
+  max-width: none;
+  display: table-cell;
 }
 
-figure.image{
+
+
+p {
+  text-align: left;
+  line-height: 1.5;
+  margin: 1.5em auto;
+  max-width: 600px;
 }
+  
+@media (max-width: 700px) { 
+  p.left { 
+    float: none;
+    width: 100%;
+    margin: 0 0 0 0; 
+  } 
+}
+
+@media (min-width: 701px) {
+  p.left {
+    float: left;
+    margin-left: 10%;
+    padding: 10px;
+  }
+}
+
+@media (max-width: 700px) { 
+  p.right { 
+    float: none;
+    width: 100%;
+    margin: 0 0 0 0; 
+  } 
+}
+
+@media (min-width: 701px) {
+  p.right {
+    float: right;
+    margin-right: 15%;
+    padding: 10px;
+    display: inline;
+    width: 40%;
+  }
+}
+
+@media (max-width: 700px) { 
+  .left p { 
+    float: none;
+    width: 100%;
+    margin: 0 0 0 0; 
+  } 
+}
+
+@media (min-width: 701px) {
+  .left p {
+    float: left;
+    margin-left: 10%;
+    padding: 10px;
+    width: 40%; 
+  }
+}
+
+.left p {
+  float: left;
+  margin-left: 40%;
+}
+
+
+
 /*
   background:linear-gradient(to right, #D2FF43  0%, #0DD6FF 80%);
   background-color: #D2FF43;
