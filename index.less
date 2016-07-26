@@ -10,8 +10,6 @@
 @media @tablet     { html { font-size: 16px; } }
 @media @desktop    { html { font-size: 18px; } }
 @media @desktop-xl { html { font-size: 20px; } }
-@import 'base.less';
-
 
 html {
   background-color: #eee !important;
@@ -38,27 +36,45 @@ html body {
 
 /* headers */
 
+h1, 
+h2, 
+h3, 
+h4, 
+h5, 
+h6, 
+.xl, 
+.xxl,
+.date,
+.sidebar,
+.subheading, {
+  font-family: @sans;
+}
+
 h1 { 
   font-size: 2.618em;
-  font-family: @sans;
   margin-bottom: 0em;
 }
 
 h2 { 
   font-size: 1.618em; 
-  font-family: @sans;
   font-weight: normal;
 }
 
 h3 { 
   font-size: 1.000em; 
-  font-family: @sans;
 }     
 
 h4 { 
   font-size: 0.618em; 
-  font-family: @sans;
 }   
+
+h5 {
+  font-size: 0.382em;
+}
+
+h6 {
+  font-size: 0.236em;
+}
 
 
 /* paragraph */
@@ -85,45 +101,40 @@ p.right {
 
 /* article header  */
 
-.subheading {
-  font-family: @sans;
+.date,
+.byline,
+.subheading, {
   margin-bottom: .5em;
-  margin-top: 0em;
+  margin-top: 0;
 }
 
-.byline:before{ 
+.byline:before { 
   content: "By "; 
   font-weight:bold; 
 }
 
 .byline {
   font-family: sans-serif;
-  margin-bottom: .5em;
-  margin-top: 0em;
   font-weight: lighter;
 }
 
 .date {
-  font-family: @sans;
-  margin-bottom: .5em;
-  margin-top: 0em;
   font-weight: lighter;
 }
 
 
 /* article body elements  */
 
-.credit {
-  color: grey;
-  font-size: .9em;
-  text-transform: uppercase;
-}
-
+.credit,
 .caption {
   color: grey;
   font-size: .9em;
 }
 
+.credit { 
+  text-transform: uppercase;
+}
+  
 .citation {
   font-style: italic;
 }
@@ -140,27 +151,6 @@ p.right {
   line-height: .75;
 }
 
-.pullquote {
-  font-size: 1.5em;
-}
-
-@media (min-width: 701px) {
-  .pullquote {
-    margin: 0 1em 1em 2em;
-    width: 400px;
-    float: right;
-  }
-}
-
-@media (max-width: 700px) {
-  .pullquote {
-    float: none;
-    width: 100%;
-    max-width: 600px;
-    margin: 0 auto;
-  }
-}
-
 blockquote {
   font: @serif;
   font-style: italic;  
@@ -173,6 +163,43 @@ blockquote {
   margin: auto;
   text-align: center;
   margin-left: 20.5%;
+}
+
+/* pullquote and sidebar */
+
+.pullquote {
+  font-size: 1.5em;
+}
+
+.sidebar {
+  font-size: .8em;
+}
+  
+@media (min-width: 701px) {
+  .pullquote,
+  .sidebar { 
+    width: 18.7em;
+    margin: 0 1em 1em 2em;
+    float: right;
+  } 
+  .sidebar {
+    text-align: left;
+    display: block;
+    border: 0.125em solid grey; 
+    padding: 0.652em;  
+  }
+} 
+
+@media (max-width: 700px) {
+  .pullquote,
+  .sidebar {
+    width: 100%;
+    max-width: 37.5em;
+    margin: 0 auto;
+  }
+  .sidebar {
+    border: 0.125em solid grey; 
+  }
 }
 
  
@@ -226,37 +253,6 @@ ul {
   font-size: 1.12em;
   padding-left: 2em;
   padding-right: 1em;
-}
-
-
-/* sidebar  */
-
-.sidebar {
-  font-size: .8em;
-}
-
-@media (min-width: 701px) { 
-  .sidebar {
-  float: right;
-  margin-left: 10px; 
-  margin-right: 0;
-  text-align: left;
-  display: block;
-  border: 2px solid grey; 
-  padding: 10px;  
-  font-family: @sans;
-  margin: 0 1em 1em 2em;
-  width: 300px;
-  }
-} 
-  
-@media (max-width: 700px) { 
-  .sidebar { 
-    float: none;
-    width: 100%;
-    max-width: 600px;
-    margin: 0 auto;
-  } 
 }
 
 
@@ -325,6 +321,5 @@ ul {
   figure.right {
     margin-right: 10%;
   }
-
 }
 
