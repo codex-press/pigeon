@@ -70,9 +70,18 @@ p {
   line-height: 1.5;
   margin: auto;
   max-width: 600px;
-  margin-top: 20px;
+  margin-bottom: 1.2em;
 }
 
+.left p,
+p.left {
+  margin-left: 0;
+}
+
+.right p,
+p.right {
+  margin-right: 0;
+}
 
 /* article header  */
 
@@ -277,16 +286,9 @@ ul {
 
 
 /* images */
-/*
-figure.image {
-  width:  100%;
-  max-width: none;
-  display: table-cell;
-}
-*/
- 
+
 @media (max-width: 700px) { 
-  p.left { 
+  figure.left { 
     float: none;
     width: 100%;
     margin: 0 0 0 0; 
@@ -294,7 +296,7 @@ figure.image {
 }
 
 @media (min-width: 701px) {
-  p.left {
+  figure.left {
     float: left;
     margin-left: 10%;
     padding: 10px;
@@ -302,7 +304,7 @@ figure.image {
 }
 
 @media (max-width: 700px) { 
-  p.right { 
+  figure.right { 
     float: none;
     width: 100%;
     margin: 0 0 0 0; 
@@ -310,7 +312,7 @@ figure.image {
 }
 
 @media (min-width: 701px) {
-  p.right {
+  figure.right {
     float: right;
     margin-right: 15%;
     padding: 10px;
@@ -320,7 +322,7 @@ figure.image {
 }
 
 @media (max-width: 700px) { 
-  .left p { 
+  .left figure { 
     float: none;
     width: 100%;
     margin: 0 0 0 0; 
@@ -328,7 +330,7 @@ figure.image {
 }
 
 @media (min-width: 701px) {
-  .left p {
+  .left figure {
     float: left;
     margin-left: 10%;
     padding: 10px;
@@ -336,14 +338,28 @@ figure.image {
   }
 }
 
-.left {
+@media (max-width: 700px) {
+  figure.left {
+    margin: auto;
+    width: 100%;
+  }
+}
+    
+figure.left {
   float: left;
   margin-left: 10%;
   margin-right: 10px;
-  width:  40%;
+  width: 100%  ;
 }
 
-.right {
+@media (max-width: 700px) {
+  figure.right {
+    margin: auto;
+    width: 100%;
+  }
+}
+
+figure.right {
   float: right;
   margin-right: 10%;
   margin-left: 10px;
