@@ -12,25 +12,15 @@
 @media @desktop-xl { html { font-size: 20px; } }
 
 html {
-  background-color: #eee !important;
-}
-
-html,
-body {
+  background-color: #eee;
   min-height: 100vh;
-} 
-
-body {
-  background-color: #eee !important;  
-  margin: auto;
 }
 
-html body {
+body {
   font-family: @serif;
   line-height: 1.2;
-  text-color: #0D040F ;
-  text-align: center;
-  margin: auto;
+  color: #0D040F ;
+  min-height: 100vh;
 }
 
 
@@ -42,16 +32,14 @@ h3,
 h4, 
 h5, 
 h6, 
-.xl, 
-.xxl,
 .date,
 .sidebar, {
   font-family: @sans;
+  margin: 1rem;
 }
 
 h1 { 
   font-size: 2.618em;
-  margin-bottom: 0em;
 }
 
 h2 { 
@@ -81,7 +69,6 @@ h6 {
 p {
   padding-left: 1em;
   padding-right: 1em;
-  text-align: left;
   line-height: 1.5;
   margin: auto;
   max-width: 600px;
@@ -159,35 +146,10 @@ blockquote {
   text-indent: .5em;
   max-width: 600px;
   margin: auto;
-  text-align: center;
   margin-left: 20.5%;
 }
 
-/* pullquote and sidebar */
-
-.pullquote {
-  font-size: 1.5em;
-}
-
-.sidebar {
-  font-size: .8em;
-}
-  
-@media (min-width: 701px) {
-  .pullquote,
-  .sidebar { 
-    width: 18.7em;
-    margin: 0 1em 1em 2em;
-    float: right;
-  } 
-  .sidebar {
-    text-align: left;
-    display: block;
-    border: 0.125em solid grey; 
-    padding: 0.652em;  
-  }
-} 
-
+/* pullquote and sidebar for mobile */ 
 @media (max-width: 700px) {
   .pullquote,
   .sidebar {
@@ -200,7 +162,32 @@ blockquote {
   }
 }
 
- 
+.pullquote {
+  margin-right: 0;
+  padding: .2em;
+  margin: 0em 0 0 0em;
+  font-size: 1.2em;
+  line-height: 1.5;
+  max-width: 600px;
+  float: right;
+}
+
+ /* sidebar  */
+.sidebar { 
+  float: right;
+  margin: 20px;
+  margin-left: 10px; 
+  margin-right: 0;
+  text-align: left;
+  display: block;
+  border: 2px solid grey; 
+  max-width: 300px;
+  width: 270px;
+  font-size: .8em;
+  padding: 10px;  
+  font-family: @sans;
+}
+
 /* links  */
 
 a {
@@ -220,7 +207,6 @@ a:visited {
 /* lists charts */
 
 ol {
-  text-align: left;
   max-width: 600px;
   margin: auto;
   padding: 0;
@@ -243,7 +229,6 @@ ol li:before {
 }
 
 ul {
-  text-align: left;
   max-width: 600px; 
   margin: auto;
   padding: 0 0 0 1em ; 
