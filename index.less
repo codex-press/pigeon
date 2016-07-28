@@ -228,6 +228,7 @@ ol li:before {
   margin-right: 10px;
   content: counter(item) '.';
   display: inline-block;
+    scriptTimeout: 3000,
 }
 
 ul {
@@ -254,6 +255,15 @@ ul {
 }  
 .italic {
   font-style: italic;
+}
+.bold {
+  font-weight: bold;
+}
+.normal {
+  font-weight: normal;
+}
+.light {
+  font-weight: lighter;
 }
 .serif {
   font-family: @serif;
