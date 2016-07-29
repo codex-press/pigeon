@@ -37,8 +37,53 @@ p {
   font-family: "adobe-text-pro",sans-serif;
 }
 
-a {
-  color:#a7adba
+/* copied from pigeon index.less */
+
+.left p,
+p.left {
+  margin-left: 0;
+  margin-right: 30%;
+}
+
+.right p,
+p.right {
+  margin-right: 0;
+  margin-left: 30%;
+}
+
+@media (max-width: 600px) { 
+  .example-align {
+  margin-top: 1em;
+  }
+}
+
+
+/* links */
+
+a { 
+  color: #CB403A ;
+}
+a:hover {
+  color: #CB7F3A ;
+}
+a:visited {
+  color: grey ;
+}
+
+
+/* spacing between couples of divs */
+div:nth-child(n) {
+  margin-top: 3em;
+}
+
+
+.code {
+  color: #884ED9;
+  background-color: #eee;
+  padding: .3em;
+  border-radius:  2px;
+  font-size: 18px;
+  font-weight: normal;
 }
 
 main {
@@ -50,6 +95,7 @@ main {
   flex: 1 1 50%;
   min-width: 300px;
   font-family: @sans;
+
 }
 
 
