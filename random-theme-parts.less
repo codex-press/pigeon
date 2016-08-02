@@ -1,5 +1,17 @@
+/* ol counters lower case fix */
 
+ol li {
+  counter-increment: item;
+}
 
+ol li:before {
+  font-family: Times, "Times New Roman", serif;
+  font-size: 1.12em;
+  margin-right: 10px;
+  content: counter(item) '.';
+  display: inline-block;
+}
+//
  
 figure.left {
   float: left;
