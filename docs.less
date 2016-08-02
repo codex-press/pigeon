@@ -24,9 +24,18 @@ body {
   min-height: 100vh;
 }
 
+article {
+  max-width: 35.000em;
+  min-width: 100vw;
+}
+
 
 h1,
-h3 {
+h2,
+h3,
+h4,
+h5,
+h6 {
   margin: 0 1rem;
   font-family: @sans;
 }
@@ -37,11 +46,11 @@ p {
   font-family: "adobe-text-pro",sans-serif;
 }
 
-.top {
-  margin: auto ;
+.headline {
+  margin-top: ;
+  font-size: 2.5em;
+  font-family: @sans; 
 }
-
-
 
 /* copied from pigeon index.less */
 
@@ -67,10 +76,10 @@ p.right {
 /* links */
 
 a { 
-  color: #CB403A ;
+  color: #CB403A;
 }
 a:hover {
-  color: #CB7F3A ;
+  color: #CB7F3A;
 }
 a:visited {
   color: grey ;
@@ -101,7 +110,6 @@ main {
   flex: 1 1 50%;
   min-width: 300px;
   font-family: @sans;
-
 }
 
 
@@ -132,5 +140,8 @@ main {
   padding: 0.3em;
   margin: 0;
   margin-top: 1.2rem;
+}
+
+.pigeon .sidebar {
 }
 
