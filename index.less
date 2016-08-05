@@ -1,15 +1,17 @@
 @sans: "stevie-sans", Helvetica, Arial, sans-serif; 
 @serif: "adobe-text-pro", Georgia, Times, "Times New Roman", serif;
 
-@mobile:      ~"only screen and (max-width: 529px)";
-@tablet:      ~"only screen and (min-width: 530px) and (max-width: 949px)";
-@desktop:     ~"only screen and (min-width: 950px) and (max-width: 1128px)";
-@desktop-xl:  ~"only screen and (min-width: 1129px)";
+@media (max-width: 1129px) {
+  html {
+    font-size: 18px;
+  }
+}
 
-@media @mobile     { html { font-size: 15px; } }
-@media @tablet     { html { font-size: 16px; } }
-@media @desktop    { html { font-size: 18px; } }
-@media @desktop-xl { html { font-size: 20px; } }
+@media (min-width: 1130px) {
+  html { 
+    font-size: 20px;
+  }
+}
 
 
 body {
