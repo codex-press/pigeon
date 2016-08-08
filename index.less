@@ -100,12 +100,12 @@ p.right {
 }
 
 .byline {
-  font-family: sans-serif;
-  font-weight: lighter;
+  font-family: @sans;
+  font-weight: 200;
 }
 
 .date {
-  font-weight: lighter;
+  font-weight: 200;
 }
 
 
@@ -150,19 +150,6 @@ blockquote {
   margin-left: 20.5%;
 }
 
-/* pull-quote and sidebar for mobile */ 
-@media (max-width: 700px) {
-  .pull-quote,
-  .sidebar {
-    width: 100%;
-    max-width: 37.5em;
-    margin: 0 auto;
-    text-align: center;
-  }
-  .sidebar {
-    border: 0.125em solid grey; 
-  }
-}
 
 .pull-quote {
   margin-right: 0;
@@ -173,6 +160,15 @@ blockquote {
   max-width: 600px;
   float: right;
 }
+
+.pull-quote .attribution {
+  font-family: @sans;
+}
+
+.pull-quote .attribution:before {
+  content: "\2014";
+}
+
 
  /* sidebar */
 .sidebar { 
@@ -188,6 +184,21 @@ blockquote {
   font-size: .8em;
   padding: 10px;  
   font-family: @sans;
+}
+
+
+/* pull-quote and sidebar for mobile */ 
+@media (max-width: 700px) {
+  .pull-quote,
+  .sidebar {
+    width: 100%;
+    max-width: 37.5em;
+    margin: 0 auto;
+    text-align: center;
+  }
+  .sidebar {
+    border: 0.125em solid grey; 
+  }
 }
 
 
