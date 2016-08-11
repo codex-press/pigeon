@@ -1,15 +1,18 @@
 @sans: "ingra", Helvetica, Arial, sans-serif; 
 @serif: "adobe-text-pro", Georgia, Times, "Times New Roman", serif;
 
-@mobile:      ~"only screen and (max-width: 529px)";
-@tablet:      ~"only screen and (min-width: 530px) and (max-width: 949px)";
-@desktop:     ~"only screen and (min-width: 950px) and (max-width: 1128px)";
-@desktop-xl:  ~"only screen and (min-width: 1129px)";
+@media (max-width: 1129px) {
+  html {
+    font-size: 17px;
+  }
+}
 
-@media @mobile     { html { font-size: 15px; } }
-@media @tablet     { html { font-size: 16px; } }
-@media @desktop    { html { font-size: 18px; } }
-@media @desktop-xl { html { font-size: 20px; } }
+@media (min-width: 1130px) {
+  html { 
+    font-size: 20px;
+  }
+}
+
 
 h1,
 h2,
@@ -44,13 +47,21 @@ p {
   font-family: "ingra",sans-serif;
   line-height: 1.5;
 } 
+
+.intro {
+  margin: 2em auto .5em;
+}
+
+.first-p {
+  margin-bottom: 2em;
+}
+
+
 .headline {
   margin-top: 2rem  ;
   font-size: 2.5em;
   font-family: @sans; 
 }
-
-/* copied from pigeon index.less */
 
 .left p,
 p.left {
@@ -71,6 +82,16 @@ p.right {
 }
 
 
+.pigeon h1, 
+h2,
+h3,
+h4,
+h5,
+h6 {
+  white-space: nowrap;
+  overflow:hidden;
+}
+
 /* links */
 
 a { 
@@ -83,10 +104,6 @@ a:visited {
   color: grey ;
 }
 
-
-.intro {
-  margin: 2em auto;
-}
 
 /* spacing between couples of divs */
 .code {
@@ -116,9 +133,7 @@ main {
   flex: 1 1 50%;
   min-width: 300px;
   padding-left: 100px;
-  
   box-sizing: border-box;
-
   font-family: Georgia, Times, "Times New Roman", serif;
   line-height: 1.2;
   color: #0D040F;
@@ -138,7 +153,7 @@ main {
   padding: 0.3em;
   margin: 0;
   margin-top: 1.2rem;
-  font-family: @sans;
+  font-family: "stevie-sans", Helvetica, Arial, sans-serif;
 }
 
 .pigeon .sidebar {
@@ -151,6 +166,14 @@ main {
 .weird-li {
   margin-left: -1em;
   list-style-type: none;
+}
+
+@media (max-width:300px) { 
+  .pigeon .pull-quote {
+    float: none;
+    width: initial;
+    margin-left: 1em;
+  }
 }
 
 .pigeon .pull-quote {
