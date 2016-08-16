@@ -1,0 +1,86 @@
+@import "index.js";
+@import (reference) "../index.less";
+
+@sans: "vista-sans", Helvetica, Arial, sans-serif; 
+@serif: "modesto-poster", Georgia, Times, "Times New Roman", serif;
+
+
+html > body {
+  font-family: @sans;
+  line-height: 1.4;
+  color: hsla(221, 100%, 6%, 1);
+  background-color: white;
+}
+
+h1, 
+h2, 
+h3, 
+h4, 
+h5, 
+h6, 
+{
+  font-family: @serif;
+  color: hsla(221, 100%, 6%, 1); 
+  margin: 1rem auto;
+  max-width: 33.333em;
+  text-align: left;
+
+}
+
+.drop-cap {
+  float: left;
+  font-size: 6em;
+  font-family: @serif;
+  color: white;
+  background-color: hsla(221, 100%, 6%, 1);
+  padding: .75em;
+  display: inline-block;
+  line-height: .75;
+}
+
+
+blockquote {
+  font-family: @serif;
+  font-style: italic;  
+  padding-left: .7em;
+  padding-top: 1.2em;
+  padding-bottom: 1.4em;
+  border-left: 4px solid hsla(350, 40%, 40%, 1);
+  text-indent: .5em;
+  max-width: 600px;
+  margin: auto;
+  margin-left: 20.5%;
+}
+
+
+/* sidebar */
+
+.sidebar { 
+  float: right;
+  margin-left: 10px; 
+  margin-right: 5%;
+  text-align: left;
+  display: block;
+  border: 0.125em solid hsla(350, 40%, 40%, 1); 
+  max-width: 300px;
+  width: 270px;
+  font-size: .8em;
+  padding: 10px;  
+  font-family: @sans;
+}
+
+
+/* links  */
+
+a {
+  color: hsla(350, 40%, 40%, 1);
+  font-weight: bold; 
+}
+
+a:hover {
+  color: hsla(350, 80%, 40%, 1);
+}
+
+a:visited {
+  color: grey;
+}
