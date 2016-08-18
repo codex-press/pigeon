@@ -1,10 +1,10 @@
-// these fonts are for raven theme which is also index.less
+// these fonts are for pigeon theme which is also index.less
  
-// vista sans
+// Adobe Text Pro
 (function(d) {
 
   var config = {
-    kitId: 'qvd6gue',
+    kitId: 'xjc0jow',
     scriptTimeout: 3000,
     async: true
   },

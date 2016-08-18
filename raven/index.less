@@ -1,0 +1,234 @@
+@sans: "vista-sans", Helvetica, Arial, sans-serif; 
+@serif: "modesto-poster", Georgia, Times, "Times New Roman", serif;
+
+/* imported parts */
+
+@import "blockquote.less";
+@import "drop_cap.less";
+@import "figure.less";
+@import "pull_quote.less";
+@import "sidebar.less";
+@import "ordered_list.less";
+@import "unordered_list.less";
+
+
+@media (max-width: 1129px) {
+  html {
+    font-size: 17px;
+  }
+}
+
+@media (min-width: 1130px) {
+  html { 
+    font-size: 20px;
+  }
+}
+
+body {
+  font-family: @serif;
+  line-height: 1.2;
+  color: #0D040F ;
+  background-color: #eee;
+}
+
+.full-height {
+  height: 100vh;
+}
+
+figure .frame {
+  color: white;
+}
+
+figure.dark-text .frame {
+  color: #333;
+}
+
+
+/* headers */
+
+h1, 
+h2, 
+h3, 
+h4, 
+h5, 
+h6, 
+.date {
+  font-family: @sans;
+  margin: 1rem auto;
+  max-width: 33.333em;
+  text-align: left;
+}
+
+h1 { 
+  font-size: 2.986em;
+}
+
+h2 { 
+  font-size: 2.488em; 
+}
+
+h3 { 
+  font-size: 2.074em; 
+}     
+
+h4 { 
+  font-size: 1.728em; 
+}   
+
+h5 {
+  font-size: 1.440em;
+}
+
+h6 {
+  font-size: 1.200em;
+}
+
+
+
+/* paragraph */
+
+p {
+  padding-left: 1em;
+  padding-right: 1em;
+  line-height: 1.5;
+  margin: auto;
+  max-width: 33.333em;
+  margin-bottom: 1.2em;
+  font-family: @serif;
+}
+
+.left p,
+p.left {
+  margin-left: 0;
+}
+
+.right p,
+p.right {
+  margin-right: 0;
+}
+
+
+/* article header  */
+
+.date,
+.byline, {
+  margin-bottom: .5em;
+  margin-top: 0;
+}
+
+.byline:before { 
+  content: "By "; 
+  font-weight: bold; 
+}
+
+.byline {
+  font-family: @sans;
+  font-weight: 200;
+}
+
+.date {
+  font-weight: 200;
+}
+
+
+/* article body elements  */
+
+.credit,
+.caption {
+  color: grey;
+  font-size: .9em;
+}
+
+.credit { 
+  text-transform: uppercase;
+}
+  
+.citation {
+  font-style: italic;
+}
+
+.section-start{
+  margin-top: 1.5em;
+}
+
+
+
+/* links  */
+
+a {
+  color: #884ED9;
+  font-weight: bold; 
+}
+
+a:hover {
+  color: green;
+}
+
+a:visited {
+  color: grey;
+}
+
+
+/* lists charts */
+
+ol {
+  max-width: 33.333em;
+  padding: 0;
+  counter-reset: item;
+  list-style: ;
+  padding-left: 1em;
+  padding-right: 1em;
+}
+
+
+ul {
+  max-width: 33.333em; 
+  margin: auto;
+  padding: 0 0 0 1em ; 
+  font-family: "Times New Roman", @serif;
+  font-size: 1.12em;
+  padding-left: 2em;
+  padding-right: 1em;
+}
+
+
+/* recyclable elements  */
+
+.text-center {
+  text-align: center;
+}
+.text-bottom {
+  display: flex;
+  align-items: flex-end;
+}
+.xl {
+  font-size: 1.5em;
+}
+.xxl {
+  font-size: 2em;
+}
+.justify {
+  text-align: justify;
+}  
+.italic {
+  font-style: italic;
+}
+.bold {
+  font-weight: bold;
+}
+.serif {
+  font-family: @serif;
+}
+.sans {
+  font-family: @sans;
+}
+.center {
+  margin: auto;
+}
+.light {
+  font-weight: 200;
+}
+.margin-zero {
+  margin: 0;
+}
+
