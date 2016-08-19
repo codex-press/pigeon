@@ -1,5 +1,5 @@
-
-@import "index.js";
+@import "raven.js";
+@import "../base.less";
 @import (reference) "../index.less";
 
 @sans: "vista-sans", Helvetica, Arial, sans-serif; 
@@ -56,17 +56,8 @@ blockquote {
 
 /* sidebar */
 
-.sidebar { 
-  float: right;
-  margin-left: 10px; 
-  margin-right: 5%;
-  text-align: left;
-  display: block;
+html > body > .sidebar { 
   border: 0.125em solid hsla(350, 40%, 40%, 1); 
-  max-width: 300px;
-  width: 270px;
-  font-size: .8em;
-  padding: 10px;  
   font-family: @sans;
 }
 

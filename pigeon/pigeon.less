@@ -1,0 +1,31 @@
+@sans: "stevie-sans", Helvetica, Arial, sans-serif; 
+@serif: "adobe-text-pro", Georgia, Times, "Times New Roman", serif;
+
+@import "../base.less";
+@import "pigeon.js";
+
+
+body {
+  color: #0D040F ;
+  background-color: #eee;
+}
+
+p { 
+  font-family: @serif;
+}
+
+.byline:before { 
+  content: "By "; 
+  font-weight: bold; 
+}
+
+.byline {
+  font-family: @sans;
+  font-weight: 200;
+}
+
+.date {
+  font-weight: 200;
+}
+
+
