@@ -2,7 +2,6 @@
  
 // Adobe Text Pro
 (function(d) {
-
   var config = {
     kitId: 'plb5jar',
     scriptTimeout: 3000,

@@ -8,7 +8,7 @@ html > body {
   font-family: @sans;
   line-height: 1.4;
   color: hsla(221, 100%, 6%, 1);
-  background-color: hsl(36, 100%, 39%) ;
+  background-color: hsl(55, 100%, 40%);
 }
 
 h1, 
@@ -19,16 +19,30 @@ h5,
 h6, 
 {
   font-family: @serif;
-  background-color: linear-gradient(-45deg, 
-    hsl(36, 100%, 6%) 0%,
-    hsl(100, 100%,20%) 50%);
-  color: hsla(221, 100%, 6%, 1); 
-  margin: 1rem auto;
+  background-image: linear-gradient(120deg, 
+    hsla( 30, 80%, 50%, 1), 
+    hsla( 35, 80%, 50%, .8), 
+    hsla( 40, 80%, 50%, .6), 
+    hsla( 30, 80%, 50%, .4), 
+    hsl(55, 100%, 40%), );
+  color: hsl(  0, 20%,  0%,); 
+  margin: 1rem;
+  padding: .2em;
   max-width: 33.333em;
   text-align: left;
-
+  line-height: 1.2;
 }
 
+/* paragraph */
+
+p {
+  font-family: @sans;
+}
+
+p::first-line {
+  font-family: ;
+
+}
 .drop-cap {
   float: left;
   font-size: 2em;
