@@ -19,6 +19,9 @@ h5,
 h6, 
 {
   font-family: @serif;
+  background-color: linear-gradient(-45deg, 
+    hsl(36, 100%, 6%) 0%,
+    hsl(100, 100%,20%) 50%,);
   color: hsla(221, 100%, 6%, 1); 
   margin: 1rem auto;
   max-width: 33.333em;
@@ -28,11 +31,13 @@ h6,
 
 .drop-cap {
   float: left;
-  font-size: 6em;
+  font-size: 2em;
   font-family: @serif;
   color: white;
-  background-color: hsla(221, 100%, 6%, 1);
+  background-color: linear-gradient(-45deg,
+    hsla(221, 100%, 6%, 1);
   padding: .75em;
+  margin: 0 2em; 
   display: inline-block;
   line-height: .75;
 }
