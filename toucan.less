@@ -3,9 +3,7 @@
 
 @import "base.less";
 
-
 html > body {
-  font-family: @sans;
   line-height: 1.4;
   color: hsla(221, 100%, 6%, 1);
   background-color: hsl(55, 100%, 40%);
@@ -18,7 +16,6 @@ h4,
 h5, 
 h6, 
 {
-  font-family: @serif;
   background-image: linear-gradient(120deg, 
     hsla( 30, 80%, 50%, 1), 
     hsla( 35, 80%, 50%, .8), 
@@ -28,8 +25,6 @@ h6,
   color: hsl(  0, 20%,  0%,); 
   margin: 1rem;
   padding: .2em;
-  max-width: 33.333em;
-  text-align: left;
   line-height: 1.2;
 }
 
@@ -43,19 +38,16 @@ p::first-line {
   font-family: ;
 
 }
+
 .drop-cap {
-  float: left;
   font-size: 2em;
-  font-family: @serif;
   color: white;
-  background-color: linear-gradient(-45deg, 
+  background-image: linear-gradient(-45deg, 
     hsl(214, 100%, 6%) 0%,
     hsl(54, 100%, 20%) 50%,
     hsl(240, 100%, 60%) 100%);
-  padding: .5em;
-  margin: 0 .2em; 
-  display: inline-block;
-  line-height: .75;
+  padding: 0.5em;
+  margin: 0 0.2em; 
 }
 
 
@@ -86,7 +78,6 @@ blockquote {
   width: 270px;
   font-size: .8em;
   padding: 10px;  
-  font-family: @sans;
   background-color: hsla(93, 100%, 39%, 1);
 }
 

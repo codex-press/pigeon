@@ -1,9 +1,6 @@
-@sans: Helvetica, Arial, sans-serif; 
-@serif: Georgia, Times, "Times New Roman", serif;
 
 
-/* imported parts */
-
+@import "font_size.less";
 @import "blockquote.less";
 @import "drop_cap.less";
 @import "figure.less";
@@ -12,22 +9,12 @@
 @import "ordered_list.less";
 @import "unordered_list.less";
 
-@media (max-width: 1129px) {
-  html {
-    font-size: 17px;
-  }
-}
 
-@media (min-width: 1130px) {
-  html { 
-    font-size: 20px;
-  }
-}
 
-body {
-  font-family: @serif;
-  line-height: 1.2;
-} 
+
+
+/// everything below here into separate file:
+
 
 .full-height {
   height: 100vh;
@@ -83,27 +70,6 @@ h6 {
 
 
 
-/* paragraph */
-
-p {
-  padding-left: 1em;
-  padding-right: 1em;
-  line-height: 1.5;
-  margin: auto;
-  max-width: 33.333em;
-  margin-bottom: 1.2em;
-}
-
-.left p,
-p.left {
-  margin-left: 0;
-}
-
-.right p,
-p.right {
-  margin-right: 0;
-}
-
 
 /* article header  */
 
@@ -152,30 +118,8 @@ a:visited {
 }
 
 
-/* lists charts */
 
-ol {
-  max-width: 33.333em;
-  padding: 0;
-  counter-reset: item;
-  list-style: ;
-  padding-left: 1em;
-  padding-right: 1em;
-}
-
-
-ul {
-  max-width: 33.333em; 
-  margin: auto;
-  padding: 0 0 0 1em ; 
-  font-family: "Times New Roman", @serif;
-  font-size: 1.12em;
-  padding-left: 2em;
-  padding-right: 1em;
-}
-
-
-j/* recyclable elements  */
+/* recyclable elements  */
 
 .text-center {
   text-align: center;
