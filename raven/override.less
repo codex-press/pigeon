@@ -1,4 +1,49 @@
 
 @import "../lib/index.less";
 
+.sidebar {
+  background-image: linear-gradient(to right,
+  hsla(240, 90%, 50%, .1),
+  hsla(210, 100%, 50%, .4)); 
+  color: white;
+}
+ 
+p.first-graf:first-line {
+  font-family: "essonnes-display";
+
+}
+
+p.first-graf:first-letter {
+  float: left;
+  font-family: @dropCapFont;
+  font-size: @dropCapFontSize;
+  margin: @dropCapMargin;
+  padding: @dropCapPadding;
+  padding-right: .05em;
+  display: inline-block;
+  line-height: .75;
+  color: @dropCapFontColor;
+  background-color: @dropCapBackgroundColor;
+}
+
+
+.pull-quote:before {
+  font-family: "essonnes-display";
+  font-size: 10em;
+  z-index:  10;
+  quotes: "\201C" "\201D" "\2018" "\2019";
+  float: left;
+  margin-bottom: -2em ;
+  padding: ;
+  display: inline-block;
+  line-height: .75;
+  color: hsla(190, 100%, 50%, .2);
+  content: open-quote;
+}
+
+blockquote {
+  text-shadow: 0px 0px 30px hsl(20, 100%, 20%);
+}
+
+
 
