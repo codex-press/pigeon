@@ -1,11 +1,12 @@
 
 @import '../basic/variables.less';
 
-@headerFont: "essonnes-display", Helvetica, Arial, sans-serif; 
-@bodyFont: "ratio", Georgia, Times, "Times New Roman", serif;
+@headerFont: "essonnes-display", Georgia, Times, "Times New Roman"
+  , serif; 
+@bodyFont: "ratio", Helvetica, Arial, sans-serif;
 
-@bodyFontColor: hsl(240, 50%, 10%);
-@bodyBackgroundColor: hsl(0, 10%, 90%);
+@bodyFontColor: hsl(0, 10%, 90%);
+@bodyBackgroundColor: hsl(240, 50%, 10%);
 
 /* header elements */ 
 
@@ -19,11 +20,20 @@
 @anchorHoverColor: hsl(0, 100%, 55%);
 @anchorVisitedColor: grey;
 
+/* pull-quote */
+
+@pullQuoteFont: "essonnes-display"; 
+@pullQuoteStyle: italic;
+@pullQuoteWeight: 500;
+@pullQuoteFontSize: 1.4em;
+@pullQuoteMargin: .3em auto ;
+
+
 /* blockquote  */
 
 @blockquoteFontStyle: normal;
-@blockquoteBorderLeft: 20px solid hsl(0, 25%, 50%);
-@blockquoteColor: black;
+@blockquoteBorderLeft: 10px solid hsl(0, 80%, 90%);
+@blockquoteColor: hsl(0, 0%, 90%);
 
 /* sidebar  */
 
@@ -36,9 +46,9 @@
 
 @dropCapFont: "essonnes-display";
 @dropCapFontColor: hsl(0, 0%, 90%);
-@dropCapBackgroundColor: hsl(240, 50%, 10%);
+@dropCapBackgroundColor: ;
 @dropCapFontSize: 5em;
-@dropCapPadding: .1em .05em .1em .5em ;
+@dropCapPadding: .1em .05em .1em 0 ;
 @dropCapMargin: auto .02em -.1em;
 
 /*   */
