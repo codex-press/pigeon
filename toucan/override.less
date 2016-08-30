@@ -1,0 +1,86 @@
+
+@import "../lib/index.less";
+
+html > body {
+  line-height: 1.4;
+}
+
+h1, 
+h2, 
+h3, 
+h4, 
+h5, 
+h6, 
+{
+  letter-spacing: .03em;
+  background-image: linear-gradient(-120deg, 
+    hsla( 30, 80%, 50%, 1), 
+    hsla( 35, 80%, 50%, .8), 
+    hsla( 40, 80%, 50%, .6), 
+    hsla( 30, 80%, 50%, .4), 
+    hsl(55, 100%, 40%));
+  border-radius: .2em 2em .2em .5em;
+  margin: 1rem;
+  padding: .2em;
+  line-height: 1.2;
+}
+
+.sidebar {
+  border-radius: .2em 2em .2em .5em;
+}
+
+/* paragraph */
+
+p::first-line {
+  font-family: ;
+
+}
+
+.drop-cap {
+  border-radius: .2em;
+  font-size: 2em;
+  color: white;
+  background-image: linear-gradient(-45deg, 
+    hsla(214, 100%, 6%, .1),
+    hsla(240, 100%, 60%, .5),
+    hsla(240, 100%, 20%, 1));
+  padding: 0.5em;
+  text-shadow: 1px 1px 30px red;
+  margin: 0 0.2em; 
+}
+
+
+blockquote {
+  font-family: @headerFont;
+  font-style: italic;  
+  padding-left: .7em;
+  padding-top: 1.2em;
+  padding-bottom: 1.4em;
+  border-left: 4px solid hsla(350, 40%, 40%, 1);
+  text-indent: .5em;
+  max-width: 600px;
+  margin: auto;
+  margin-left: 20.5%;
+}
+
+
+
+
+/* links  */
+
+a {
+  color: hsla(20, 40%, 40%, 1);
+  font-weight: bold; 
+}
+
+a:hover {
+  color: hsla(20, 80%, 40%, 1);
+  letter-spacing: .2em;
+}
+
+a:visited {
+  color: grey;
+}
+
+/* 
+*/ 

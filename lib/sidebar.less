@@ -7,7 +7,7 @@
   text-align: left;
   display: block;
   border: @sidebarBorder; 
-  max-width: 300px;
+  max-width: @halfColumnWidth;
   width: 270px;
   font-size: .8em;
   padding: 10px;
@@ -25,4 +25,18 @@
   }
 }
 
+
+.left .sidebar,
+.sidebar .left,
+.sidebar.left {
+  margin-left: 5%;
+  float: left;
+
+}
+
+.right .sidebar,
+.sidebar .right,
+.sidebar.right {
+  margin-right: 0;
+}
 

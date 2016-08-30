@@ -8,7 +8,7 @@
   margin: .5em auto;
   font-size: @pullQuoteFontSize;
   line-height: 1.5;
-  max-width: 600px;
+  max-width: @halfColumnWidth;
   float: right;
 }
 
@@ -20,7 +20,8 @@
   content: "\2014";
 }
 
-@media (max-width: 500px) {
+
+@media (max-width: 700px) {
   .pull-quote { 
     width: 100%;
     max-width: 33.3em;
