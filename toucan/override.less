@@ -13,12 +13,11 @@ h5,
 h6, 
 {
   letter-spacing: .03em;
-  background-image: linear-gradient(-120deg, 
-    hsla( 30, 80%, 50%, 1), 
+  background-image: linear-gradient(120deg, 
     hsla( 35, 80%, 50%, .8), 
     hsla( 40, 80%, 50%, .6), 
-    hsla( 30, 80%, 50%, .4), 
-    hsl(55, 100%, 40%));
+    hsla( 30, 80%, 50%, .3), 
+    hsl(360, 100%, 40%));
   border-radius: .2em 2em .2em .5em;
   margin: 1rem;
   padding: .2em;
@@ -28,9 +27,10 @@ h6,
 
 /* paragraph */
 
-p::first-line {
-  font-family: ;
-
+.graf::first-line {
+  color: hsl(0, 100%, 95%);
+  font-family: "essonnes-display";
+  font-weight: book;
 }
 
 .drop-cap {
@@ -39,7 +39,8 @@ p::first-line {
   background-image: linear-gradient(-45deg, 
     hsla(214, 100%, 6%, .1),
     hsla(240, 100%, 60%, .5),
-    hsla(240, 100%, 20%, 1));
+    hsla(240, 100%, 20%, 1)
+  );
   padding: 0.5em;
   text-shadow: 1px 1px 30px red;
   margin: 0 0.2em; 
@@ -55,8 +56,11 @@ blockquote {
   max-width: 600px;
 }
 
+.sidebar {
+  border-radius: .2em 2em .2em .5em;
 
 
+}
 
 /* links  */
 
@@ -78,13 +82,21 @@ a:hover {
   );
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  text-transform: uppercase;
-  font-size: .85em;
 }
 
 a:visited {
   color: grey;
 }
 
-/* 
-*/ 
+.sidebar(@color, @class) {
+  .@{class}.sidebar {
+    background: desaturate(@color, 10%);
+    border: desaturate(@color, 60%);
+    color: desaturate(@color, 90%);
+  }
+}
+
+.sidebar(#ff0000, red);
+.sidebar(#0000ff, blue);
+
+
