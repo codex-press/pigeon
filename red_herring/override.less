@@ -1,0 +1,104 @@
+
+@import "../lib/index.less";
+
+
+/*
+html > body {
+  line-height: 1.4;
+}
+
+h1, 
+h2, 
+h3, 
+h4, 
+h5, 
+h6, 
+{
+  letter-spacing: .03em;
+  background-image: linear-gradient(120deg, 
+    hsla( 35, 80%, 50%, .8), 
+    hsla( 40, 80%, 50%, .6), 
+    hsla( 30, 80%, 50%, .3), 
+    hsl(360, 100%, 40%));
+  border-radius: .2em 2em .2em .5em;
+  margin: 1rem;
+  padding: .2em;
+  line-height: 1.2;
+}
+
+
+/* paragraph */
+
+.graf::first-line {
+  color: hsl(0, 100%, 95%);
+  font-family: "essonnes-display";
+  font-weight: book;
+}
+
+.drop-cap {
+  border-radius: .2em;
+  color: white;
+  background-image: linear-gradient(-45deg, 
+    hsla(214, 100%, 6%, .1),
+    hsla(240, 100%, 60%, .5),
+    hsla(240, 100%, 20%, 1)
+  );
+  padding: 0.5em;
+  text-shadow: 1px 1px 30px red;
+  margin: 0 0.2em; 
+}
+
+
+blockquote {
+  font-family: @headerFont;
+  padding-left: .7em;
+  padding-top: 1.2em;
+  padding-bottom: 1.4em;
+  text-indent: .5em;
+  max-width: 600px;
+}
+
+.sidebar {
+  border-radius: .2em 2em .2em .5em;
+
+
+}
+
+/* links  */
+
+a {
+  background: -webkit-linear-gradient(
+    hsl(360, 85%, 40%), 
+    hsl(360, 85%, 20%)
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: thin;
+  border-bottom: .2em;
+}
+
+a:hover {
+  background: -webkit-linear-gradient(
+    hsl(200, 85%, 40%), 
+    hsl(360, 85%, 20%)
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+a:visited {
+  color: grey;
+}
+
+.sidebar(@color, @class) {
+  .@{class}.sidebar {
+    background: desaturate(@color, 10%);
+    border: desaturate(@color, 60%);
+    color: desaturate(@color, 90%);
+  }
+}
+
+.sidebar(#ff0000, red);
+.sidebar(#0000ff, blue);
+
+
