@@ -1,13 +1,15 @@
 
 @import "../lib/index.less";
+@import 'https://fonts.googleapis.com/css?family=Lato:100,300,400';
+
 
 body {
   background-color: hsl(175, 80%, 45%);
   background-image: linear-gradient(90deg, 
-    hsl(175, 80%, 45%) 0%,
+    hsla(175, 80%, 45%, .4) 0%,
     hsl(175, 40%, 45%) 3%,
     hsl(175, 40%, 45%) 97%,
-    hsla(175, 70%, 45%, .4) 100%,
+    hsla(175, 10%, 45%, 0) 100%,
     );
   background-size: unset;  
   line-height: 1.8;
@@ -24,7 +26,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-weight: 400;
+  font-weight: 300;
   font-size: 4em; 
   text-shadow: .06em -.01em 0 hsla(340, 60%, 45%, .2);
 }
@@ -39,7 +41,7 @@ h6 {
 }
 
 //blockquote font weight looks great in 600 as well
-//
+
 blockquote {
   background-color: teal;
   font-weight: 300;
@@ -52,46 +54,27 @@ blockquote {
     hsla(30, 90%, 50%, 1),
     hsla(30, 60%, 50%, .5),
   );
+  font-weight: 300;
   padding: 0.5em;
   text-shadow: 1px 1px 30px red;
   margin: 0 0.2em; 
 }
 
-/*
-p.first-graf:first-line {
-  font-family: "essonnes-display";
-
+.pull-quote {
+  font-style: ;
+  font-weight: 300;
+  color: hsl(240, 90%, 25%);
+  text-shadow: 0 .06em .01em hsl(300, 80%, 45%) ;
 }
 
-p.first-graf:first-letter {
-  float: left;
-  font-family: @dropCapFont;
-  font-size: @dropCapFontSize;
-  margin: @dropCapMargin;
-  padding: @dropCapPadding;
-  padding-right: .05em;
-  display: inline-block;
-  line-height: .75;
-  color: @dropCapFontColor;
-  background-color: @dropCapBackgroundColor;
+a {
+  border-style: ;
+  border-bottom: .01em solid hsl(60,90%,50%);
+  padding-bottom: .39em;
 }
 
 
-.pull-quote:before {
-  font-family: "essonnes-display";
-  font-size: 10em;
-  z-index:  10;
-  quotes: "\201C" "\201D" "\2018" "\2019";
-  float: left;
-  margin-bottom: -2em ;
-  padding: ;
-  display: inline-block;
-  line-height: .75;
-  color: hsla(190, 100%, 50%, .2);
-  content: open-quote;
+::selection {
+  background-color: hsl(320, 80%, 50%);
 }
-
-
-*/
-
 

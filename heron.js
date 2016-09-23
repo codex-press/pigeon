@@ -1,7 +1,7 @@
 // these fonts are for pigeon theme which is also index.less
  
 // Adobe Text Pro
-
+/*
 (function(d) {
 
   var config = {
@@ -31,3 +31,4 @@
   s.parentNode.insertBefore(tk,s)
 })(document);
 
+*/
