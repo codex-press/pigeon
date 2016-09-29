@@ -1,4 +1,3 @@
-
 body {
   font-family: @bodyFont;
   line-height: 1.2;
@@ -7,3 +6,13 @@ body {
 
 } 
 
+body .error {
+    background: hsl(220, 100%, 50%);
+    opacity: 0.9;
+    cursor: pointer;
+    padding: 0 1em;
+    margin: 1rem;
+    border-radius: 0.5em;
+    animation: 300ms cp-fade-in linear;
+    overflow: hidden;
+}

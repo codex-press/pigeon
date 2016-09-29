@@ -18,17 +18,6 @@
   background-color: @sidebarBackgroundColor;
 }
 
-@media (max-width: 600px) {
-  .sidebar {
-    width: 100%;
-    text-align: left;
-    max-width: @columnTextWidth;
-    margin:  0 -1.5em 1.2em .5em ;
-    padding-left: 1em;
-    padding-right: 1em;
-  }
-}
-
 .left .sidebar,
 .sidebar .left,
 .sidebar.left {
@@ -42,4 +31,26 @@
 .sidebar.right {
   margin-right: 0;
 }
+
+@media (max-width: 600px) {
+  .sidebar {
+    width: 100%;
+    text-align: left;
+    max-width: @columnTextWidth;
+    margin:  0 -1.5em 1.2em .5em ;
+    padding-left: 1em;
+    padding-right: 1em;
+   }  
+ }
+
+@media (max-width: 600px) {
+    .left .sidebar,
+    .sidebar .left,
+    .sidebar.left {
+      margin-left: 0%;
+      max-width: 95%;
+      float: none;
+   }
+}
+
 
