@@ -1,11 +1,7 @@
-// these fonts are for pigeon theme which is also index.less
- 
-// Adobe Text Pro
-
 (function(d) {
 
   var config = {
-    kitId: 'qvd6gue',
+    kitId: 'flw8osy',
     scriptTimeout: 3000,
     async: true
   },
