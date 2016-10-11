@@ -4,6 +4,7 @@ table {
   max-width: @tableMaxWidth;
   margin: auto;
   padding: 0 1rem;
+  text-align: left;
 }
 
 table td {
@@ -32,23 +33,31 @@ tr {
 tbody {
   font-weight: normal;
 }
+
 td {
 
 }
 
 
 /* table lined */
-.row-lines {
-  border-bottom: .2em solid grey;
+table.row-lines tr {
+  border-bottom: .02em solid grey;
 }
 
-
-.column-lines {
-  border-left: .2em solid grey;
+table.column-lines tr {
+  border-left: .02em solid grey;
 }
 
-
+table.row-lines.column-lines tr {
+  border-bottom: .02em solid grey;
+  border-left: .02em solid grey;
+}
 
 /* table stripped */
+
+table.striped:nth-child(2) tr {
+  background-color: #f2f2f2;
+}
+
 
 /* table padded */
