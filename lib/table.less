@@ -1,11 +1,15 @@
 /* table empty */
 
 table {
+  font-family: @tableFont;
   max-width: @tableMaxWidth;
-  margin: auto;
+  margin: 1rem auto;
   padding: 0 1rem;
   text-align: left;
   border-collapse: collapse;
+  color: @tableColor;
+  background-color: @tableBackgroundColor;
+
 }
 
 table td {
@@ -14,6 +18,7 @@ table td {
 }
 
 thead {
+  font-family: @tableHeadFont;
   font-weight: bold;
 }
 
@@ -21,19 +26,20 @@ th {
   font-weight: bold;
 }
 
-tr {
-
-}
-
 tbody {
   font-weight: normal;
 }
 
+
+tr {
+
+}
 td {
 
 }
 
 /* table lined */
+
 table.lined tr {
   border-bottom: .02em solid grey;
   padding: 0.3rem;
@@ -47,7 +53,8 @@ table.grid td {
 /* table striped */
 
 table.striped tr:nth-child(even) {
-  background-color: #fafafa;
+  background-color: @tableStripedColor; 
+  padding: 0.3rem;
 }
 
 /* table padded */
@@ -55,6 +62,4 @@ table.striped tr:nth-child(even) {
 table.padded td {
   padding: 1rem;
 }
-
-
 

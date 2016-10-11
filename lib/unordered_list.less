@@ -9,9 +9,17 @@ ul {
   margin-bottom: 1em;
 }
 
-/* bullet list has an effect on the h3 where it adds the padding
-  of the bullets to h3 */
-.header-li {
-  margin-left: -1em;
-  list-style-type: none;
+li h1, 
+h2, 
+h3, 
+h4, 
+h5, 
+h6 {
+  padding-left: 0;
+  margin-left: -1.2rem;
+  margin-bottom: 0;
+  color: @headerListItemColor;
+  text-align: left;
 }
+
+
