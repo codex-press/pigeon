@@ -4,15 +4,29 @@ table {
   max-width: @tableMaxWidth;
   margin: auto;
   text-align: left;
+}
 
+table {
+  max-width: @textWidth;
+  margin: auto;
+  padding: 0 1rem;
+}
+
+table td {
+  vertical-align: top;
+  padding-bottom: 1rem;
+}
+
+table td:first-child {
+  font-weight: 800;
 }
 
 thead {
-  font-weight: bold;
+  font-style: bold;
 }
 
 th {
-  font-weight: bold;
+  font-style: bold;
 }
 
 tr {
