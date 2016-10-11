@@ -43,24 +43,23 @@ td {
 /* table lined */
 table.row-lines tr {
   border-bottom: .02em solid grey;
+/*  padding: 0 .3em; */
 }
 
 table.column-lines tr {
   border-left: .02em solid grey;
+/*  padding: 0 .3em; */
 }
-
-/*
-table.row-lines.column-lines tr {
-  border-bottom: .02em solid grey;
-  border-left: .02em solid grey;
-}
-*/
 
 
 /* table stripped */
 
-table.striped:nth-child(2) tr {
-  background-color: #f2f2f2;
+table.striped:nth-child(even) tr {
+  background-color: red;
 }
 
 /* table padded */
+
+table.padded tr {
+  padding: 1rem;
+}
