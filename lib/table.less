@@ -13,12 +13,6 @@ table td {
   padding-bottom: 1rem;
 }
 
-/*
-table td:first-child {
-  font-weight: 800;
-}
-*/
-
 thead {
   font-weight: bold;
 }
@@ -39,32 +33,21 @@ td {
 
 }
 
-
 /* table lined */
-table.row-lines tr {
+table.lined tr {
   border-bottom: .02em solid grey;
-/*  padding: 0 .3em; */
+  padding: 0.3rem;
 }
 
-table.column-lines td {
-  border-right: .02em solid grey;
-  border-left: .02em solid grey;
-/*  padding: 0 .3em; */
-}
-
-
-/* table full border */
-
-table.all-lines td {
+table.grid td {
   border: .02em solid grey;
-  padding: 1rem;
+  padding: 0.3rem;
 }
-
 
 /* table striped */
 
-.striped:nth-child(even) tr {
-  background-color: red;
+table.striped tr:nth-child(even) {
+  background-color: #fafafa;
 }
 
 /* table padded */
@@ -72,3 +55,6 @@ table.all-lines td {
 table.padded td {
   padding: 1rem;
 }
+
+
+
