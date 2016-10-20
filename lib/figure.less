@@ -1,14 +1,6 @@
-.full-height {
-  height: 100vh;
-}
 
-
-@media (max-width: 700px) { 
-  figure.left, 
-  figure.right {
-    width: 100%;
-    margin: auto; 
-  } 
+figure {
+  margin: 1rem auto;
 }
 
 @media (min-width: 701px) {
@@ -21,16 +13,25 @@
 
   figure.left {
     float: left;
-    margin: 0 1em;
+    margin: 1rem;
   }
 
   figure.right {
     float: right;
-    margin: 0 1em;
+    margin: 1rem;
   }
 
 }
 
+// on mobile the .left / .right images expand to full width
+@media (max-width: 700px) { 
+  figure.left, 
+  figure.right {
+    width: 100%;
+  } 
+}
+
+// on xl screen, keep it somewhat in the middle 
 @media (min-width: 1400px) {
 
   figure.left {
@@ -42,12 +43,31 @@
   }
 }
 
-/* text color on images */
 
-figure .frame {
+.full-width {
+  width: 100%;
+}
+
+.half-width {
+  width: 50%;
+}
+
+.full-window {
+  width: 100%;
+  height: 100vh;
+}
+
+.full-height {
+  height: 100vh;
+}
+
+
+// text color on images
+figure.text-light .frame {
   color: white;
 }
 
-figure.dark-text .frame {
+figure.text-dark .frame {
   color: #333;
 }
+
