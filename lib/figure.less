@@ -1,5 +1,26 @@
-.full-height {
+figure {
+  margin: 1rem auto;
+}
+
+figure.text-width {
+  max-width: @columnTextWidth;
+}
+
+figure.full-width {
+  width: 100%;
+}
+
+figure.full-height {
   height: 100vh;
+}
+
+figure.full-window {
+  width: 100%;
+  height: 100vh;
+}
+
+article > figure.full-window:first-child {
+  margin-top: 0;
 }
 
 
@@ -42,6 +63,7 @@
   }
 }
 
+
 /* text color on images */
 
 figure .frame {
@@ -50,4 +72,19 @@ figure .frame {
 
 figure.dark-text .frame {
   color: #333;
+}
+
+
+
+
+
+figure {
+  h1, 
+  h2, 
+  h3, 
+  h4, 
+  h5, 
+  h6 {
+    color: white;
+  }
 }
