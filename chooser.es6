@@ -1,4 +1,5 @@
 import dom from 'dom';
+import article from 'article';
 
 import './pigeon';
 import './raven';
@@ -19,6 +20,7 @@ dom.ready.then(() => {
     dom(document.documentElement).removeClass(theme);
     theme = e.target.textContent;
     dom(document.documentElement).addClass(theme);
+    article.resize();
   });
 
 });
