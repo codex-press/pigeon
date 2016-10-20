@@ -27,6 +27,7 @@
 @pullQuoteWeight: 500;
 @pullQuoteFontSize: 1.4em;
 @pullQuoteMargin: .3em auto ;
+@pullQuoteColor: @bodyFontColor;
 
 
 /* blockquote  */
@@ -38,8 +39,11 @@
 /* sidebar  */
 
 @sidebarFont: @bodyFont; 
-@sidebarColor: hsl(240, 50%, 10%);
-@sidebarBackgroundColor: ;
+@sidebarColor: @bodyFontColor;
+@sidebarBackgroundColor:  
+  linear-gradient(to right,
+  hsla(240, 90%, 50%, .1),
+  hsla(210, 100%, 50%, .4));
 
 /* drop-cap  */
 

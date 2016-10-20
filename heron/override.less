@@ -31,8 +31,8 @@ h6 {
 }
 
 .sidebar {
-  background: hsla(240, 15%, 50%, 1); 
-  color: white;
+  background: @sidebarBackgroundColor; 
+  color: @sidebarColor;
   font-size: 1.0em;
   box-shadow: 0 0 .2em white;
   border: grey;
@@ -41,17 +41,14 @@ h6 {
 //blockquote font weight looks great in 600 as well
 
 blockquote {
-  background-color: teal;
+  background-color: @blockquoteBackgroundColor;
   font-weight: 300;
 }
 //background image first opacity to one alsolooks favorable 
 .drop-cap {
   border-radius: .2em;
-  color: white;
-  background-image: linear-gradient(to left, 
-    hsla(30, 90%, 50%, 1),
-    hsla(30, 60%, 50%, .5),
-  );
+  color: @dropCapFontColor;
+  background-image: @dropCapBackgroundColor; 
   font-weight: 300;
   padding: 0.5em;
   text-shadow: 1px 1px 30px red;
@@ -62,7 +59,6 @@ blockquote {
   padding-left: .2em;
   font-style: ;
   font-weight: 300;
-  color: hsl(240, 90%, 25%);
   clear: both;
   transform: scale(1,1.05);
 }

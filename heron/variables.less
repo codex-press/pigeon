@@ -22,6 +22,7 @@
 
 /* pull-quote */
 
+@pullQuoteColor: hsl(240, 90%, 25%);
 @pullQuoteFont: ; 
 @pullQuoteStyle: ;
 @pullQuoteWeight: ;
@@ -34,18 +35,21 @@
 @blockquoteFontStyle: normal;
 @blockquoteBorderLeft: .5em groove hsl(175, 60%, 40%);
 @blockquoteColor: hsl(340, 20%, 10%);
+@blockquoteBackgroundColor: teal;
 
 /* sidebar  */
 
 @sidebarFont: @bodyFont; 
 @sidebarColor: ;
-@sidebarBackgroundColor: ;
+@sidebarBackgroundColor: hsla(240, 15%, 50%, 1);
 
 /* drop-cap  */
 
 @dropCapFont: ;
 @dropCapFontColor: hsl(0, 0%, 90%);
-@dropCapBackgroundColor: ;
+@dropCapBackgroundColor: linear-gradient(to left, 
+    hsla(30, 90%, 50%, 1),
+    hsla(30, 60%, 50%, .5));
 @dropCapFontSize: 5em;
 @dropCapPadding: .1em .05em .1em 0 ;
 @dropCapMargin: auto .02em -.1em;
