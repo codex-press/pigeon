@@ -1,19 +1,21 @@
+
 p {
-  padding-left: 1em;
-  padding-right: 1em;
   line-height: 1.5;
-  margin: auto;
+  margin: 1rem auto;
   max-width: @columnTextWidth;
-  margin-bottom: 1.2em;
 }
 
-.left p,
-p.left {
-  margin-left: 0;
-}
 
-.right p,
-p.right {
-  margin-right: 0;
-}
+@media (max-width: @columnTextWidth) {
 
+  .left p,
+  p.left {
+    margin-left: 1rem;
+  }
+
+  .right p,
+  p.right {
+    margin-right: 1rem;
+  }
+
+}

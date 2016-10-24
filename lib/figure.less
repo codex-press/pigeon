@@ -1,14 +1,15 @@
 
 figure {
+  max-width: @columnTextWidth;
   margin: 1rem auto;
 }
 
-figure.text-width {
-  max-width: @columnTextWidth;
+article > figure.full-window:first-child {
+  margin-top: 0;
 }
 
 figure.full-width {
-  width: 100%;
+  max-width: initial;
 }
 
 figure.full-height {
@@ -16,13 +17,28 @@ figure.full-height {
 }
 
 figure.full-window {
-  width: 100%;
+  max-width: initial;
   height: 100vh;
 }
 
-article > figure.full-window:first-child {
-  margin-top: 0;
+// at small sizes we add padding onto the body to keep text from the edge,
+// here we add negative margin onto the wide figures to compensate
+@media (max-width: (@columnTextWidth + 2)) {
+
+  figure.full-width {
+    margin: 1rem -1rem;
+  }
+
+  figure.full-height {
+    margin: 1rem -1rem;
+  }
+
+  figure.full-window {
+    margin: 1rem -1rem;
+  }
+
 }
+
 
 @media (min-width: 701px) {
 
