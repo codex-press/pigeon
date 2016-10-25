@@ -1,0 +1,32 @@
+
+aside.sidebar { 
+  max-width: @textWidth;
+  margin: auto;
+  padding: 0.8em;
+
+  color: @sidebarColor;
+  background-color: @sidebarBackgroundColor;
+
+  font-family: @sidebarFont;
+  font-size: 0.8em;
+
+  border: @sidebarBorder; 
+}
+
+
+@media (min-width: (@textWidth*2)) {
+  .left aside.sidebar,
+  aside.sidebar.left {
+    float: left;
+    margin: 1rem;
+  }
+
+  .right aside.sidebar,
+  aside.sidebar.right {
+    float: right;
+    margin: 1rem; 
+  }
+
+}
+
+

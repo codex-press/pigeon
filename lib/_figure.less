@@ -1,0 +1,166 @@
+
+figure {
+  max-width: @textWidth;
+  max-height: 100vh;
+  margin: 1rem auto;
+}
+
+figcaption {
+  color: @captionColor;
+  font-size: @captionSize;
+}
+
+article > figure.full-window:first-child {
+  margin-top: 0;
+}
+
+figure.full-width {
+  max-width: initial;
+}
+
+figure.full-height {
+  height: 100vh;
+}
+
+figure.full-window {
+  max-width: initial;
+  height: 100vh;
+}
+
+
+// at small sizes we add padding onto the body to keep text from the edge,
+// here we add negative margin onto the wide figures to compensate
+@media (max-width: (@textWidth + 2)) {
+
+  figure.full-width {
+    margin: 1rem -1rem;
+  }
+
+  figure.full-height {
+    margin: 1rem -1rem;
+  }
+
+  figure.full-window {
+    margin: 1rem -1rem;
+  }
+
+}
+
+
+
+@media (min-width: 701px) {
+
+  figure.left {
+    float: left;
+    margin: 1rem;
+  }
+
+  figure.right {
+    float: right;
+    margin: 1rem;
+  }
+
+  figure.left,
+  figure.right {
+    width: 40%;
+    // keeps it more or less inline with the text
+    // margin-top: (@lineHeight / 3)~'em';
+    margin-top: 0.3em;
+  }
+
+}
+
+// on mobile the .left / .right images expand to full width
+@media (max-width: 700px) { 
+  figure.left, 
+  figure.right {
+    width: 100%;
+  } 
+}
+
+
+
+figure {
+  p,
+  h1, 
+  h2, 
+  h3, 
+  h4, 
+  h5, 
+  h6 {
+    max-width: initial;
+    margin: 0;
+  }
+}
+
+figure .frame {
+  &,
+  h1, 
+  h2, 
+  h3, 
+  h4, 
+  h5, 
+  h6 {
+    color: white;
+  }
+}
+
+figure.dark-text {
+  &,
+  h1, 
+  h2, 
+  h3, 
+  h4, 
+  h5, 
+  h6 {
+    color: #333;
+  }
+}
+
+html.javascript figure {
+
+  .top {
+    position: absolute;
+    top: 0;
+  }
+  .right { 
+    position: absolute;
+    right: 0;
+  }
+  .bottom {
+    position: absolute;
+    bottom: 0;
+  }
+  .left {
+    position: absolute;
+    left: 0;
+  }
+
+}
+
+
+.gallery {
+  height: 100vh;
+
+  display: flex;
+  flex-flow: column nowrap;
+  align-content: stretch;
+}
+
+.gallery .row {
+  flex: 1 1 auto;
+  display: flex;
+  flex-flow: row nowrap;
+}
+
+.gallery .row > * {
+  flex: 1 1 auto;
+  width: 30%;
+  margin: 1rem;
+}
+
+.row figure {
+  height: 100%;
+  // align-self: flex-end;
+  // flex: 1 1 auto;
+}
