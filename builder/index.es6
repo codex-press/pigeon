@@ -1,6 +1,6 @@
 import dom from 'dom';
 import article from 'article';
-import fonts from './builder/google_fonts.json';
+import fonts from './google_fonts.json';
 
 // needs: 
 //   syntax highlighting
