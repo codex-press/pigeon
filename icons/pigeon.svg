@@ -1,6 +1,6 @@
 <svg class="bird pigeon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 500 484.5">
   <defs>
-    <linearGradient id="linear-gradient" x1="98.16" y1="205.17" x2="251.19" y2="440.81" gradientUnits="userSpaceOnUse">
+    <linearGradient id="pigeon-linear-gradient" x1="98.16" y1="205.17" x2="251.19" y2="440.81" gradientUnits="userSpaceOnUse">
       <stop offset="0"/>
       <stop offset="0.15" stop-color="#040305"/>
       <stop offset="0.31" stop-color="#110b12"/>
@@ -9,7 +9,7 @@
       <stop offset="0.83" stop-color="#6c446e"/>
       <stop offset="0.99" stop-color="#965f99"/>
     </linearGradient>
-    <radialGradient id="radial-gradient" cx="162.59" cy="74.6" r="20.53" gradientUnits="userSpaceOnUse">
+    <radialGradient id="pigeon-radial-gradient" cx="162.59" cy="74.6" r="20.53" gradientUnits="userSpaceOnUse">
       <stop offset="0.47" stop-color="#302c2d"/>
       <stop offset="0.47" stop-color="#42302c"/>
       <stop offset="0.48" stop-color="#6b3a2a"/>
@@ -33,7 +33,7 @@
     <path d="M8.18,169.9l82.12-21.31s61.9-9.82,72.31,84.8l33.92,242.93L272.4,381.7l221.41-40.17L281.33,46.88,208.12,4H118L58.14,74.79Z" style="fill: #3cc3ff"/>
     <polyline points="58.05 79.39 102.83 102.18 31.89 128.41 58.05 79.39" style="fill: #fff"/>
     <polyline points="80.74 112.12 83.03 148.87 10.58 168.03 29.48 131.28 80.74 112.12" style="fill: #fff"/>
-    <path d="M147,173.46s96.7,113.4,126.39,206.26L233,430.12l-36.46,46.19S163.51,204.71,147,173.46Z" style="fill: url(#linear-gradient)"/>
+    <path d="M147,173.46s96.7,113.4,126.39,206.26L233,430.12l-36.46,46.19S163.51,204.71,147,173.46Z" style="fill: url(#pigeon-linear-gradient)"/>
     <path d="M8.18,169.9l82.12-21.31s61.9-9.82,72.31,84.8l33.92,242.93L272.4,381.7l221.41-40.17L281.33,46.63,208.12,3.5H118l-59.89,71Z" style="fill: none;stroke: #000;stroke-miterlimit: 10;stroke-width: 7px"/>
     <polyline points="56.1 78.47 107.67 102.87 28.43 131.28" style="fill: none;stroke: #000;stroke-miterlimit: 10;stroke-width: 7.24929483578098px"/>
     <line x1="81.87" y1="112.12" x2="84.19" y2="150.17" style="fill: none;stroke: #000;stroke-miterlimit: 10;stroke-width: 7.24929483578098px"/>
@@ -52,6 +52,6 @@
       <line x1="258.58" y1="342.32" x2="186.09" y2="410.08" style="fill: #fff;stroke: #000;stroke-miterlimit: 10;stroke-width: 6.904090309503514px"/>
       <line x1="268.04" y1="357.67" x2="188.96" y2="431.59" style="fill: none;stroke: #000;stroke-miterlimit: 10;stroke-width: 7.24929483578098px"/>
     </g>
-    <circle cx="162.59" cy="74.6" r="20.53" style="fill: url(#radial-gradient)"/>
+    <circle cx="162.59" cy="74.6" r="20.53" style="fill: url(#pigeon-radial-gradient)"/>
   </g>
 </svg>

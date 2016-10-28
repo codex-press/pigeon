@@ -1,6 +1,6 @@
 <svg class="bird raven" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 500 386.5">
   <defs>
-    <radialGradient id="radial-gradient" cx="259.9" cy="74.59" r="21.04" gradientUnits="userSpaceOnUse">
+    <radialGradient id="raven-radial-gradient" cx="259.9" cy="74.59" r="21.04" gradientUnits="userSpaceOnUse">
       <stop offset="0.67" stop-color="#302c2d"/>
       <stop offset="0.69" stop-color="#484546"/>
       <stop offset="0.71" stop-color="#5c5b5b"/>
@@ -22,6 +22,6 @@
     <polyline points="193.91 23.04 238.86 122 286.74 122 317.42 152.74 328.82 4.16" style="fill: none;stroke: #000;stroke-miterlimit: 10;stroke-width: 7px"/>
     <polyline points="185.5 156.89 247.48 222.03 238.86 122.12 305.84 238.29 293.32 332.75" style="fill: none;stroke: #000;stroke-miterlimit: 10;stroke-width: 7.42670491951375px"/>
     <polyline points="278.72 191.26 318.37 193.74 359.51 243.21 374.44 53.55" style="fill: none;stroke: #000;stroke-miterlimit: 10;stroke-width: 7.42670491951375px"/>
-    <circle cx="259.9" cy="74.59" r="21.04" style="fill: url(#radial-gradient)"/>
+    <circle cx="259.9" cy="74.59" r="21.04" style="fill: url(#raven-radial-gradient)"/>
   </g>
 </svg>
