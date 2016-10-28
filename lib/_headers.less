@@ -5,20 +5,12 @@ h3,
 h4, 
 h5, 
 h6 {
-  & when (@headerFont) {
-    font-family: @headerFont;
-  }
-  & when (@headerFontColor) {
-    color: @headerFontColor;  
-  }
+  font-family: @headerFont;
+  color: @headerFontColor;  
   margin: 0.5em auto;
   max-width: 800px;
   line-height: 1.2;
 }
-
-
-
-
 
 h1.hed {
   // something special here...

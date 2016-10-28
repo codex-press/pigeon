@@ -1,6 +1,10 @@
+
 body {
   font-family: @bodyFont;
   color: @bodyFontColor;
+}
+
+body when not (@bodyBackgroundColor = 'white') {
   background-color: @bodyBackgroundColor;
 } 
 

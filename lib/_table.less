@@ -1,42 +1,27 @@
-/* table empty */
 
 table {
-  min-width: @textWidth;
   margin: 1rem auto;
-  padding: 0 1rem;
-  text-align: left;
   border-collapse: collapse;
-  color: @tableColor;
-  background-color: @tableBackgroundColor;
-}
-
-table td {
-  vertical-align: top;
-  padding-bottom: 1rem;
-}
-
-thead {
-  font-weight: bold;
 }
 
 th {
   font-weight: bold;
 }
 
-tbody {
-  font-weight: normal;
-}
-
-
-tr {
-
-}
 td {
-
+  vertical-align: top;
+  padding: 0.5rem;
 }
 
-/* table lined */
 
+// text-width
+table.text-width {
+  width: 100%;
+  max-width: @textWidth;
+}
+
+
+// lined 
 table.lined tr {
   border-bottom: .02em solid grey;
   padding: 0.3rem;
@@ -47,15 +32,23 @@ table.grid td {
   padding: 0.3rem;
 }
 
-/* table striped */
 
-table.striped tr:nth-child(even) {
-  background-color: @tableStripedColor; 
-  padding: 0.3rem;
+// striped
+table.striped tbody tr:nth-child(even) {
+
+  & when (lightness(@bodyBackgroundColor) >= 50%) {
+    background-color:  darken(@bodyBackgroundColor, 5%);
+  }
+
+  & when (lightness(@bodyBackgroundColor) < 50%) {
+    background-color: lighten(@bodyBackgroundColor, 10%);
+  }
+
 }
 
-/* table padded */
 
+// padded
+table.padded th,
 table.padded td {
   padding: 1rem;
 }
