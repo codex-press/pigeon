@@ -5,7 +5,7 @@ import './pigeon';
 import './raven';
 import './toucan';
 
-let themes = 'basic pigeon pigeon-inverted pigeon-taxi raven raven-celtic raven-coldshoulder raven-ebony raven-goldrush raven-inverted toucan heron heron-greenland heron-cherry'.split(' ');
+let themes = 'basic pigeon pigeon-inverted pigeon-taxi raven raven-celtic raven-coldshoulder raven-ebony raven-goldrush raven-inverted toucan heron heron-greenland heron-cherry heron-cyan'.split(' ');
 
 dom.ready.then(() => {
 
