@@ -13,8 +13,8 @@ let colors = {
   basic: ['default'],
   pigeon: s('default inverted taxi'),
   raven: s('default celtic coldshoulder ebony goldrush inverted'),
-  toucan: ['default'],
   heron: s('default greenland cherry cyan'),
+  toucan: ['default'],
 };
 
 article.ready.then(() => {
