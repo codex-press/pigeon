@@ -65,7 +65,7 @@ article.ready.then(() => {
     if (color !== 'default')
       text += '/' + color;
     dom('.chooser .result').text(text);
-    setTimeout(article.resize());
+    setTimeout(() => article.resize());
   }
 
   // select all when they click on it
