@@ -157,27 +157,34 @@ html.javascript figure {
 }
 
 
-.gallery {
-  height: 100vh;
-
+.grid {
   display: flex;
   flex-flow: column nowrap;
   align-content: stretch;
 }
 
-.gallery .row {
+.grid .row {
   flex: 1 1 auto;
   display: flex;
   flex-flow: row nowrap;
 }
 
-.gallery .row > * {
+.grid .row > :first-child {
+  margin-left: 0;
+}
+.grid .row > :last-child {
+  margin-right: 0;
+}
+
+
+
+.grid .row > * {
   flex: 1 1 auto;
   width: 30%;
   margin: 1rem;
 }
 
-.row figure {
+.grid .row figure {
   height: 100%;
   // align-self: flex-end;
   // flex: 1 1 auto;
