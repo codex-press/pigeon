@@ -20,3 +20,35 @@ p.lede:first-line {
 a {
   border-bottom: 1px;
 }
+
+.dropcap {
+  float: left; 
+  font-size: 7rem;
+  
+  font-family: "essonnes-display";
+  color: hsl(0, 0%, 90%);
+  padding: .1em .05em .1em 0 ;
+  margin: -.02rem 2% -1.1rem;
+  margin-left: -1%;
+  padding-right: .05em;
+  display: inline-block;
+  line-height: .75;
+  color: @headerFontColor;
+}
+
+.two-lines {
+  font-size: 3.2rem;
+  margin:0 2% -1% 0 ;  
+}
+
+.dropcap.bord-left {
+  border-left: .2em double crimson;
+  padding-left: .6rem;
+}
+
+.hollow {
+  color: @bodyBackgroundColor;
+  -webkit-text-stroke: 1px @bodyFontColor;
+}
+
+

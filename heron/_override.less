@@ -49,15 +49,7 @@ blockquote {
   font-weight: 300;
 }
 //background image first opacity to one alsolooks favorable 
-.dropcap {
-  border-radius: .2em;
-  color: @dropCapFontColor;
-  background-image: @dropCapBackgroundColor; 
-  font-weight: 300;
-  padding: 0.5em;
-  text-shadow: 1px 1px 30px red;
-  margin: 0 0.2em; 
-}
+
 
 .pullquote {
   padding-left: .2em;
@@ -78,5 +70,37 @@ a {
 
 ::selection {
   background-color: hsl(320, 80%, 50%);
+}
+
+.dropcap {
+  float: left; 
+  font-size: 7rem;
+ 
+  border-radius: .2em;
+  font-weight: 300;
+  padding: 0.5em;
+  text-shadow: 1px 1px 30px red;
+  margin: 0 0.2em; 
+  color: hsl(0, 0%, 90%);
+  background-image: linear-gradient(to left, 
+    hsla(30, 90%, 50%, 1),
+    hsla(30, 60%, 50%, .5));
+  display: inline-block;
+  line-height: .75;
+}
+// background color isn't regestering 
+.spacious {
+  border-radius: .2em;
+  font-weight: 300;
+  padding: 0.5em;
+  text-shadow: 1px 1px 30px red;
+  margin: 0 0.2em; 
+  color: hsl(0, 0%, 90%);
+  background-color: linear-gradient(to left, 
+    hsla(30, 90%, 50%, 1),
+    hsla(30, 60%, 50%, .5));
+  display: inline-block;
+  line-height: .75;
+
 }
 
