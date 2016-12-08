@@ -21,7 +21,7 @@ table.text-width {
 
 // lined 
 table.lined tr {
-  border-bottom: .02em solid grey;
+  border-bottom: .02em solid @linedTableColor;
   padding: 0.3rem;
 }
 
@@ -32,16 +32,8 @@ table.grid td {
 }
 
 // striped
-table.striped tbody tr:nth-child(even) {
-
-  & when (lightness(@bodyBackgroundColor) >= 50%) {
-    background-color:  darken(@bodyBackgroundColor, 5%);
-  }
-
-  & when (lightness(@bodyBackgroundColor) < 50%) {
-    background-color: lighten(@bodyBackgroundColor, 10%);
-  }
-
+table.striped tbody tr:nth-child(odd) {
+  background-color: @stripedTableColor;
 }
 
 // padded

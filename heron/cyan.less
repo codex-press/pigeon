@@ -1,5 +1,5 @@
 
-@import '../basic/_variables.less';
+@import '../basic/_variables';
 
 @headerFont: Lato, Helvetica Neue, Helvetica, Arial, sans-serif; 
 @bodyFont: Lato, Helvetica Neue, Helvetica, Arial, sans-serif; 
@@ -48,36 +48,10 @@
 @dropCapFont: ;
 @dropCapFontColor: hsl(0, 0%, 90%);
 @dropCapBackgroundColor: linear-gradient(to left, 
-    hsla(30, 90%, 50%, 1),
-    hsla(30, 60%, 50%, .5));
+  hsla(30, 90%, 50%, 1),
+  hsla(30, 60%, 50%, .5));
 @dropCapFontSize: 5em;
 @dropCapPadding: .1em .05em .1em 0 ;
 @dropCapMargin: auto .02em -.1em;
 
-@import "_override.less";
-
-.sidebar {
-  margin: 3em 0;
-  border-radius: .2em;
-  box-shadow: 2px 2px teal;
-}
-
-aside.sidebar { 
-  .dropcap {
-    color: @bodyBackgroundColor;
-  }
-}
-aside.sidebar { 
-  p {
-    color: ;
-    text-align: left; 
-  }
-}
-
-aside.sidebar { 
-  h1,h2,h3,h4,h5,h6 {
-    color: crimson;
-    text-align: left; 
-  }
-}
-
+@import "_styles";

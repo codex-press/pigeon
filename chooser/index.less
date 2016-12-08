@@ -1,4 +1,11 @@
 
+// toucan
+@import url('https://fonts.googleapis.com/css?family=Oswald');
+
+// heron
+@import url('https://fonts.googleapis.com/css?family=Lato:300,300i,900');
+
+
 .fixed.chooser {
   position: fixed;
   font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
@@ -45,12 +52,46 @@
 }
 
 .fixed.chooser .swatch {
+  font-size: inherit;
   cursor: pointer;
+  position: relative;
   height: 2em;
   width: 2em;
   margin: 0.2em;
   border-radius: 0.2em;
   border: 1px solid #999;
+}
+
+.fixed.chooser .swatch:before {
+  content: 'A';
+  display: block;
+  width: 0.5em;
+  height: 0.5em;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-60%, -50%);
+  line-height: 0.5;
+}
+
+.fixed.chooser .owl.swatch:before {
+  transform: translate(-70%, 0);
+}
+
+.fixed.chooser .swatch.basic {
+  font-family: initial;
+}
+
+.fixed.chooser .swatch.heron {
+  font-weight: 300;
+}
+
+// matches what's in all the themes except Heron
+.scoped {
+  @media (min-width: 1130px) { font-size: 20px; }
+  @media (max-width: 1130px) { font-size: 18px; }
+  @media (max-width: 950px) { font-size: 16px; }
+  @media (max-width: 530px) { font-size: 15px; }
 }
 
 
@@ -77,39 +118,37 @@
   @import (multiple) '_scoped.less';
 }
 
-
 .scoped.raven {
   @import (multiple) '../raven/index.less';
   @import (multiple) '_scoped.less';
 }
 
-
-.scoped.raven.celtic {
-  @import (multiple) '../raven/celtic.less';
+.scoped.owl {
+  @import (multiple) '../owl/index.less';
   @import (multiple) '_scoped.less';
 }
 
 
-.scoped.raven.coldshoulder {
-  @import (multiple) '../raven/coldshoulder.less';
+.scoped.owl.celtic {
+  @import (multiple) '../owl/celtic.less';
   @import (multiple) '_scoped.less';
 }
 
 
-.scoped.raven.ebony {
-  @import (multiple) '../raven/ebony.less';
+.scoped.owl.coldshoulder {
+  @import (multiple) '../owl/coldshoulder.less';
   @import (multiple) '_scoped.less';
 }
 
 
-.scoped.raven.goldrush {
-  @import (multiple) '../raven/goldrush.less';
+.scoped.owl.ebony {
+  @import (multiple) '../owl/ebony.less';
   @import (multiple) '_scoped.less';
 }
 
 
-.scoped.raven.inverted {
-  @import (multiple) '../raven/inverted.less';
+.scoped.owl.goldrush {
+  @import (multiple) '../owl/goldrush.less';
   @import (multiple) '_scoped.less';
 }
 
@@ -123,6 +162,11 @@
 .scoped.heron {
   @import (multiple) '../heron/index.less';
   @import (multiple) '_scoped.less';
+
+  @media (max-width: 530px) { font-size: 17px; }
+  @media (max-width: 950px) { font-size: 18px; }
+  @media (max-width: 1130px) { font-size: 22px; }
+  @media (min-width: 1130px) { font-size: 24px; }
 }
 
 

@@ -1,45 +1,25 @@
+@import '../basic/_variables';
 
-@import '../basic/_variables.less';
+@headerFont: "stevie-sans", Helvetica, Arial, sans-serif; 
+@bodyFont: "adobe-text-pro", Georgia, Times, "Times New Roman", serif;
 
-@headerFont: "essonnes-display", Georgia, Times, "Times New Roman", serif; 
-@bodyFont: "ratio", Helvetica, Arial, sans-serif;
+// dimensions
+@textWidth: 30rem;
+@lineHeight: 1.2;
+@floatBreak: ~'(min-width:' (@textWidth * 2) ~')';
 
+// colors
 @bodyFontColor: hsl(0, 10%, 90%);
 @bodyBackgroundColor: hsl(240, 50%, 10%);
 
-/* header elements */ 
-
+@headerFontColor: ; 
 @photoCreditColor: grey;
 @captionColor: grey;
-@captionSize: .9em;
-
-/* link anchor */
+@stripedTableColor: #ccc;
+@linedTableColor: black;
+@codeBackgroundColor: ;
 
 @anchorColor: hsl(0, 100%, 25%);
 @anchorHoverColor: hsl(0, 100%, 55%);
 @anchorVisitedColor: grey;
 
-/* pullquote */
-
-@pullQuoteFont: "essonnes-display"; 
-@pullQuoteStyle: italic;
-@pullQuoteWeight: 500;
-@pullQuoteFontSize: 1.4em;
-@pullQuoteMargin: .3em auto ;
-@pullQuoteColor: @bodyFontColor;
-
-
-/* blockquote  */
-
-@blockquoteFontStyle: normal;
-@blockquoteBorderLeft: 6px groove hsl(0, 80%, 90%);
-@blockquoteColor: hsl(0, 0%, 90%);
-
-/* sidebar  */
-
-@sidebarFont: @bodyFont; 
-@sidebarColor: @bodyFontColor;
-@sidebarBackgroundColor:  
-  linear-gradient(to right,
-  hsla(240, 90%, 50%, .1),
-  hsla(210, 100%, 50%, .4));

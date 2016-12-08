@@ -1,5 +1,130 @@
+@import '_variables';
+@import '../lib/index';
 
-@import '_variables.less';
-@import '../lib/_index.less';
+html {
+  @media (max-width: 530px) { font-size: 15px; }
+  @media (max-width: 950px) { font-size: 16px; }
+  @media (max-width: 1130px) { font-size: 18px; }
+  @media (min-width: 1130px) { font-size: 20px; }
+}
 
+h1.hed {
+  font-weight: normal;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  width: @textWidth;
+}
+
+p.dek {
+  font-size: 1.5em;
+}
+
+.subhed {
+  width: @textWidth;
+  margin: 3rem auto 1rem;
+  font-size: 1em;
+  font-weight: bold;
+}
+
+p.intro,
+.intro p {
+  text-align: justify;
+}
+
+aside.editors-note {
+  font-style: italic;
+  max-width: @textWidth;
+  margin: 1rem auto;
+}
+
+aside.pullquote {
+  max-width: @textWidth;
+  margin: 1rem auto;
+  font-style: italic;
+  font-size: 1.4em;
+  line-height: 1.5;
+}
+
+aside.pullquote .attribution:before {
+  content: "\2014";
+}
+
+aside.sidebar { 
+  max-width: @textWidth;
+  margin: 1rem auto;
+  padding: 0 1rem;
+  border: 1px solid grey;
+}
+
+aside.sidebar { 
+  h1, h2, h3, h4, h5, h6 {
+    font-size: 1.7rem;
+  }
+}
+
+
+@media @floatBreak {
+
+  aside.pullquote.left,
+  aside.sidebar.left {
+    float: left;
+    clear: both;
+    margin-right: 1rem;
+  }
+
+  aside.pullquote.right,
+  aside.sidebar.right {
+    float: right;
+    clear: both;
+    margin-left: 1rem;
+  }
+
+  aside.pullquote.right,
+  aside.pullquote.left {
+    margin-top: -0.3rem;
+  }
+
+  aside.sidebar.right,
+  aside.sidebar.left {
+    margin-top: 0;
+  }
+
+}
+
+// on extra large screens they stay somewhat in the middle
+@media (min-width: 1400px) {
+
+  aside.sidebar.left,
+  aside.pullquote.left {
+    margin-left: 10%;
+  }
+
+  aside.sidebar.right,
+  aside.pullquote.right {
+    margin-right: 10%;
+  }
+
+}
+
+blockquote {
+  max-width: @textWidth;
+  margin: 1rem auto;
+  padding: 0 2rem;
+}
+
+ul, ol {
+  max-width: @textWidth;
+  margin: 1rem auto;
+}
+
+li {
+  margin: .5rem 0;
+}
+
+.dropcap {
+  padding-right: .25rem;
+  font-size: 6.2em;
+  line-height: .78;
+}
 

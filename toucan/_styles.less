@@ -1,0 +1,219 @@
+@import '../lib/index';
+
+@import url('https://fonts.googleapis.com/css?family=Oswald');
+
+html {
+  @media (max-width: 530px) { font-size: 15px; }
+  @media (max-width: 950px) { font-size: 16px; }
+  @media (max-width: 1130px) { font-size: 18px; }
+  @media (min-width: 1130px) { font-size: 20px; }
+}
+
+h1.hed {
+
+}
+
+h1, h2, h3, h4, h5, h6 {
+  width: @textWidth;
+  margin: 1rem auto;
+  padding: .2em;
+  padding-right: 1em;
+  letter-spacing: .03em;
+  background-image: linear-gradient(120deg, 
+    hsla( 35, 80%, 50%, .8), 
+    hsla( 40, 80%, 50%, .6), 
+    hsla( 30, 80%, 50%, .3), 
+    hsl(360, 100%, 40%));
+  border-radius: .2em 2em .2em .5em;
+  line-height: 1.2;
+}
+
+p.dek {
+  font-family: @headerFont;
+  font-size: 1.5em;
+}
+
+p.intro,
+.intro p {
+  max-width: (@textWidth * .8);
+  font-family: @headerFont;
+}
+
+.byline {
+  font-family: @headerFont;
+}
+
+.byline:before { 
+}
+
+time.pubdate {
+  font-family: @headerFont;
+  font-weight: 200;
+}
+
+p.lede:first-line {
+  color: hsl(0, 100%, 95%);
+}
+
+
+.subhed {
+  width: @textWidth;
+  margin: 3rem auto 1rem;
+  font-size: 1em;
+  font-weight: bold;
+}
+
+
+// blockquote
+
+blockquote {
+  max-width: @textWidth;
+  padding-left: 1rem;
+  color: hsl(220, 50%, 20%);
+  text-indent: 1.5em;
+  margin: 1rem auto;
+  // prevent margin collapse:
+  overflow: hidden;
+  border-left: .3em groove hsl(200, 100%, 40%);
+}
+
+
+// pullquote
+aside.pullquote {
+  max-width: @textWidth;
+  margin: 1rem auto;
+  font-size: 1.5em;
+  font-style: italic;
+  line-height: 1.5;
+  margin: .3em auto ;
+}
+
+aside.pullquote .attribution {
+  font-family: @headerFont;
+}
+
+aside.pullquote .attribution:before {
+  content: "\2014";
+}
+
+
+// sidebar
+aside.sidebar { 
+  max-width: @textWidth;
+  margin: 1rem auto;
+  padding: 0 0.8em;
+  font-family: @headerFont; 
+  border: 0.4em solid hsla(280, 100%, 40%, 0.35);
+  background-color: hsl(0, 30%, 50%);
+}
+
+aside.sidebar { 
+  h1, h2, h3, h4, h5, h6 {
+    font-size: 1.5em;
+    padding: 0;
+    background-color: initial;
+    background-image: initial;
+  }
+}
+
+
+aside.sidebar {
+  border-radius: .2em 2em .2em .5em;
+}
+
+.sidebar(@color, @class) {
+  aside.@{class}.sidebar {
+    background: desaturate(@color, 10%);
+    border: desaturate(@color, 60%);
+    color: desaturate(@color, 90%);
+  }
+}
+
+.sidebar(#ff0000, red);
+.sidebar(#0000ff, blue);
+
+@media @floatBreak {
+
+  aside.pullquote.left,
+  aside.sidebar.left {
+    float: left;
+    clear: both;
+    margin-right: 1rem;
+  }
+
+  aside.pullquote.right,
+  aside.sidebar.right {
+    float: right;
+    clear: both;
+    margin-left: 1rem;
+  }
+
+  aside.pullquote.right,
+  aside.pullquote.left {
+    @oneThirdLine: (@lineHeight / 3) ;
+    margin-top: ~'-@{oneThirdLine}rem';
+  }
+
+  aside.sidebar.right,
+  aside.sidebar.left {
+    margin-top: 0;
+  }
+
+}
+
+
+
+ul, ol {
+  max-width: @textWidth;
+  margin: 1rem auto;
+}
+
+li {
+  margin: .5rem 0;
+}
+
+aside.editors-note {
+  font-style: italic;
+  max-width: @textWidth;
+  margin: 1rem auto;
+}
+
+.dropcap {
+  font-size: 2.35em;
+  border-radius: .2em;
+  color: white;
+  background-image: linear-gradient(-45deg, 
+    hsla(214, 100%, 6%, .1),
+    hsla(240, 100%, 60%, .5),
+    hsla(240, 100%, 20%, 1)
+  );
+  line-height: .75;
+  padding: 0.5em;
+  text-shadow: 1px 1px 30px red;
+  margin-right: 0.2em; 
+}
+
+a {
+  background: -webkit-linear-gradient(
+    hsl(360, 85%, 40%), 
+    hsl(360, 85%, 20%)
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: thin;
+  border-bottom: .2em;
+}
+
+a:hover {
+  background: -webkit-linear-gradient(
+    hsl(200, 85%, 40%), 
+    hsl(360, 85%, 20%)
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+a:visited {
+  color: grey;
+}
+

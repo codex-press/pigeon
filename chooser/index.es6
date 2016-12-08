@@ -4,7 +4,7 @@ import * as u from 'utility';
 
 import icons from '../icons/birds.js';
 import '../pigeon/index.es6';
-import '../raven/index.es6';
+import '../owl/index.es6';
 import '../toucan/index.es6';
 
 
@@ -13,7 +13,8 @@ let s = string => string.split(' ');
 let colors = {
   basic: ['default'],
   pigeon: s('default inverted taxi'),
-  raven: s('default celtic coldshoulder ebony goldrush inverted'),
+  raven: s('default'),
+  owl: s('default celtic coldshoulder ebony goldrush'),
   heron: s('default lemon cherry cyan'),
   toucan: ['default'],
 };
@@ -44,6 +45,7 @@ article.ready.then(() => {
 
   let i = Math.round(Math.random() * (Object.keys(colors).length - 1));
   let theme = Object.keys(colors)[i];
+
   // excludes basic
   i = 1 + Math.round(Math.random() * (colors[theme].length - 2));
   let color = colors[theme][i];

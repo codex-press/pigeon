@@ -1,7 +1,6 @@
-import {typekit} from 'utility';
+//import {typekit} from 'utility';
 
 // Kan Tiki
 // Filson Soft
-
-typekit({kitId: 'plb5jar'});
+// typekit({kitId: 'plb5jar'});
 

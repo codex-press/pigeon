@@ -1,44 +1,23 @@
-
-@import '../basic/_variables.less';
+@import '../basic/_variables';
 
 @headerFont: "stevie-sans", Helvetica, Arial, sans-serif; 
 @bodyFont: "adobe-text-pro", Georgia, Times, "Times New Roman", serif;
 
+// dimensions
+@textWidth: 30rem;
+@lineHeight: 1.2;
+@floatBreak: ~'(min-width:' (@textWidth * 2) ~')';
+
+// colors
 @bodyFontColor: hsl(240, 50%, 10%);
-@headerFontColor: hsl(240, 50%, 10%); 
-@bodyBackgroundColor: hsl(0, 0%, 90%);
-
-/* header elements */ 
-
+@bodyBackgroundColor: hsl(0, 0%, 92%);
+@headerFontColor: ; 
 @photoCreditColor: grey;
 @captionColor: grey;
-@captionSize: .9em;
-
-/* link anchor */
-
+@stripedTableColor: #ccc;
+@linedTableColor: black;
+@codeBackgroundColor: ;
 @anchorColor: hsl(300, 100%, 25%);
 @anchorHoverColor: hsl(300, 100%, 55%);
 @anchorVisitedColor: grey;
-
-/* blockquote  */
-
-@blockquoteFontStyle: italic;
-@blockquoteBorderLeft: 2px solid grey;
-@blockquoteColor: black;
-
-/* sidebar  */
-
-@sidebarFont: @headerFont; 
-@sidebarBorder: 0.125em solid grey;
-@sidebarColor: hsl(240, 50%, 10%);
-@sidebarBackgroundColor: ;
-
-/* pullquote */
-
-@pullQuoteFont: ; 
-@pullQuoteStyle: ;
-@pullQuoteWeight: ;
-@pullQuoteFontSize: 2em;
-@pullQuoteMargin: ;
-@pullQuoteColor: @bodyFontColor;
 
