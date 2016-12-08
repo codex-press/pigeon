@@ -119,9 +119,16 @@ a {
 }
 
 .sidebar {
-   margin: 3em 0;
+  margin: 3em 0;
+  border-radius: .2em;
+  box-shadow: 2px 2px orange;
 }
 
+aside.sidebar { 
+  .dropcap {
+    color: @bodyBackgroundColor;
+  }
+}
 aside.sidebar { 
   p {
     opacity: .8;
@@ -134,7 +141,8 @@ aside.sidebar {
   h1,h2,h3,h4,h5,h6 {
     mix-blend-mode: multiply;
     color: ;
-    text-align: center; 
+    text-align: left; 
+
   }
 }
 
