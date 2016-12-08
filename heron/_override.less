@@ -1,0 +1,140 @@
+
+@import "../lib/_index.less";
+@import url('https://fonts.googleapis.com/css?family=Lato:100,300,400,400i,900');
+
+body {
+ line-height: 1.8;
+}
+
+p {
+  letter-spacing: .05rem;
+  line-height: 2;
+  font-weight: 300;
+  font-size: 1.2em;
+}
+
+h1 {
+  font-weight: 300;
+  font-size: 3.5em; 
+  text-shadow: .06em -.01em 0 hsla(340, 60%, 45%, .2);
+}
+
+h2,
+h3,
+h4,
+h5,
+h6 {
+  letter-spacing: initial;
+  font-weight: 300;
+  text-shadow: .06em -.01em 0 hsla(340, 60%, 45%, .2);
+}
+
+p.dek {
+  font-size: 2em;
+  font-weight: 200;
+}
+
+.sidebar {
+  background: @sidebarBackgroundColor; 
+  color: @sidebarColor;
+  font-size: 1.0em;
+  box-shadow: 0 0 .2em white;
+  border: grey;
+}
+
+//blockquote font weight looks great in 600 as well
+
+blockquote {
+  background-color: @blockquoteBackgroundColor;
+  font-weight: 300;
+}
+//background image first opacity to one alsolooks favorable 
+
+
+.pullquote {
+  padding-left: .2em;
+  font-style: italic;
+  font-weight: 300;
+  clear: both;
+  line-height: 1.1;
+  transform: scale(1,1.05);
+}
+
+a {
+  letter-spacing: initial;
+  border-style: ;
+  border-bottom: .01em solid hsl(60,90%,50%);
+  padding-bottom: .39em;
+  font-weight: 300;
+}
+
+::selection {
+  background-color: hsl(320, 80%, 50%);
+}
+
+.dropcap {
+  float: left; 
+  font-size: 7rem;
+ 
+  border-radius: .2em;
+  font-weight: 300;
+  padding: 0.5em;
+
+  line-height: .75;
+}
+
+.sunny {
+  text-shadow: 1px 1px 30px red;
+  margin: 0 0.2em; 
+  color: hsl(0, 0%, 90%);
+  background-image: linear-gradient(to left, 
+    hsla(30, 90%, 50%, 1),
+    hsla(30, 60%, 50%, .5));
+  display: inline-block;
+}
+// background color isnt regestering 
+.spacious {
+  font-size: 7;
+  padding: 0 .5em .5em .01em;
+}
+
+.wideleft {
+  font-size: 9em;
+  padding: 0  0 .2em .5em;
+}
+
+.lonely {
+  font-size: 1.3rem;
+  padding: 4.5em;
+  font-weight: bold;
+}
+
+.longdrop {
+  font-size: 2em;
+  margin:0;
+  margin-top: -6%;
+  margin-bottom: 3em;
+  padding: 0;
+
+}
+
+.sidebar {
+   margin: 3em 0;
+}
+
+aside.sidebar { 
+  p {
+    opacity: .8;
+    color: ;
+    text-align: left; 
+  }
+}
+
+aside.sidebar { 
+  h1,h2,h3,h4,h5,h6 {
+    mix-blend-mode: multiply;
+    color: ;
+    text-align: center; 
+  }
+}
+
