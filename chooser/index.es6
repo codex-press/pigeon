@@ -6,7 +6,7 @@ import icons from '../icons/birds.js';
 import '../pigeon/index.es6';
 import '../owl/index.es6';
 import '../toucan/index.es6';
-
+import '../raven/index.es6';
 
 let s = string => string.split(' ');
 
