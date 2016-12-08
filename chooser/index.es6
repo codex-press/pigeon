@@ -44,6 +44,7 @@ article.ready.then(() => {
 
   let i = Math.round(Math.random() * (Object.keys(colors).length - 1));
   let theme = Object.keys(colors)[i];
+
   // excludes basic
   i = 1 + Math.round(Math.random() * (colors[theme].length - 2));
   let color = colors[theme][i];

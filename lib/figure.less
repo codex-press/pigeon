@@ -7,48 +7,33 @@ figure {
 
 figcaption {
   color: @captionColor;
-  font-size: @captionSize;
+  font-size: .9em;
+}
+
+
+
+figure.full-width {
+  max-width: initial;
+  margin: 1rem -1rem;
+}
+
+figure.full-height {
+  height: 100vh;
+  margin: 1rem -1rem;
+}
+
+figure.full-window {
+  max-width: initial;
+  height: 100vh;
+  margin: 1rem -1rem;
 }
 
 article > figure.full-window:first-child {
   margin-top: 0;
 }
 
-figure.full-width {
-  max-width: initial;
-}
 
-figure.full-height {
-  height: 100vh;
-}
-
-figure.full-window {
-  max-width: initial;
-  height: 100vh;
-}
-
-
-// at small sizes we add padding onto the body to keep text from the edge,
-// here we add negative margin onto the wide figures to compensate
-@media (max-width: (@textWidth + 2)) {
-
-  figure.full-width {
-    margin: 1rem -1rem;
-  }
-
-  figure.full-height {
-    margin: 1rem -1rem;
-  }
-
-  figure.full-window {
-    margin: 1rem -1rem;
-  }
-
-}
-
-
-
-@media (min-width: 701px) {
+@media @floatBreak { 
 
   figure.left {
     float: left;
@@ -63,22 +48,26 @@ figure.full-window {
   figure.left,
   figure.right {
     width: 40%;
-    // keeps it more or less inline with the text
-    // margin-top: (@lineHeight / 3)~'em';
-    margin-top: 0.3em;
+    clear: both;
+    margin-top: (@lineHeight / 3)~'em';
+  }
+}
+
+// on very large screens they take up more space
+@media (min-width: 1400px) {
+
+  figure.left {
+    margin-left: 10%;
+  }
+
+  figure.right {
+    margin-right: 10%;
   }
 
 }
 
-// on mobile the .left / .right images expand to full width
-@media (max-width: 700px) { 
-  figure.left, 
-  figure.right {
-    width: 100%;
-  } 
-}
 
-
+// positioning [x-cp-overlay]
 html.javascript figure .top {
   position: absolute;
   top: 0;
@@ -96,6 +85,10 @@ html.javascript figure .left {
   left: 0;
 }
 
+.content-bottom {
+  display: flex;
+  align-items: flex-end;
+}
 
 
 figure {
@@ -131,7 +124,7 @@ figure.dark-text {
   h4, 
   h5, 
   h6 {
-    color: #333;
+    color: @bodyFontColor;
   }
 }
 
@@ -176,8 +169,6 @@ html.javascript figure {
   margin-right: 0;
 }
 
-
-
 .grid .row > * {
   flex: 1 1 auto;
   width: 30%;
@@ -189,3 +180,18 @@ html.javascript figure {
   // align-self: flex-end;
   // flex: 1 1 auto;
 }
+
+
+@media (min-width: 700px) {
+  .sticky {
+    position: sticky;
+    top: 0;
+    float: right;
+    width: 50%;
+  }
+}
+
+.right > .sticky {
+  float: left;
+}
+

@@ -1,9 +1,7 @@
 import {typekit} from 'utility';
 
-// font-family: "ratio",sans-serif;
-// 200, 300  
-
-// Didoni, Essonnes
+// Caslon: regular, italic, bold
+// Essonnes Headline: regular, italic
 
 typekit({kitId: 'qvd6gue'});
 

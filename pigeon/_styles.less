@@ -1,0 +1,171 @@
+@import '../lib/index';
+
+h1.hed {
+  font-weight: normal;
+  font-size: 2.2em;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  width: @textWidth;
+}
+
+p.dek {
+  font-family: @headerFont;
+  font-weight: 200;
+  font-size: 1.5em;
+}
+
+p.intro,
+.intro p {
+  max-width: (@textWidth * .8);
+  font-family: @headerFont;
+}
+
+@supports (hyphens: auto) {
+  p.intro,
+  .intro p {
+    text-align: justify;
+    hyphens: auto;
+  }
+}
+
+.byline {
+  font-family: @headerFont;
+  font-weight: 200;
+}
+
+.byline:before { 
+  content: "By "; 
+}
+
+
+time.pubdate {
+  font-family: @headerFont;
+  font-weight: 200;
+}
+
+.subhed {
+  width: @textWidth;
+  margin: 3rem auto 1rem;
+  font-size: 1em;
+  font-weight: bold;
+}
+
+
+blockquote {
+  max-width: @textWidth;
+  clear: both;
+  padding-left: 1rem;
+  border-left: 2px solid grey;
+  text-indent: 1.5em;
+  font-style: italic;
+  margin: 1rem auto;
+  // prevent margin collapse:
+  overflow: hidden;
+}
+
+
+// dropcap
+.dropcap {
+  font-family: @headerFont;
+  font-size: 4.6rem;
+  padding-right: 0.3rem;
+  line-height: .75;
+  color: @headerFontColor;
+}
+
+.dropcap.short {
+  font-size: 3rem;
+}
+
+.dropcap.tall {
+  font-size: 8rem;
+}
+
+.dropcap.padded {
+  font-size: 3em;
+  padding: 0.1em 15% 15% 0.1em;  
+}
+
+@media (min-width: (@textWidth * 1.2)) {
+  .dropcap.pull-left { 
+    margin-left: -2rem;
+  }
+}
+
+
+
+// pullquote
+aside.pullquote {
+  max-width: @textWidth;
+  margin: 1rem auto;
+  font-size: 1.5em;
+  line-height: 1.5;
+}
+
+aside.pullquote .attribution {
+  font-family: @headerFont;
+}
+
+aside.pullquote .attribution:before {
+  content: "\2014";
+}
+
+
+// sidebar
+aside.sidebar { 
+  max-width: @textWidth;
+  margin: 1rem auto;
+  padding: 0 0.8em;
+  font-family: @headerFont; 
+  border: 1px solid currentColor;
+}
+
+
+@media @floatBreak {
+
+  aside.pullquote.left,
+  aside.sidebar.left {
+    float: left;
+    clear: both;
+    margin-right: 1rem;
+  }
+
+  aside.pullquote.right,
+  aside.sidebar.right {
+    float: right;
+    clear: both;
+    margin-left: 1rem;
+  }
+
+  aside.pullquote.right,
+  aside.pullquote.left {
+    margin-top: -0.3rem;
+  }
+
+  aside.sidebar.right,
+  aside.sidebar.left {
+    margin-top: 0;
+  }
+
+}
+
+
+
+ul, ol {
+  max-width: @textWidth;
+  margin: 1rem auto;
+}
+
+li {
+  margin: .5rem 0;
+}
+
+
+aside.editors-note {
+  font-style: italic;
+  max-width: @textWidth;
+  margin: 1rem auto;
+}
+
+
