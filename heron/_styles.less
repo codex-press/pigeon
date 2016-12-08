@@ -1,31 +1,27 @@
 @import "../lib/index";
 
-@import url('https://fonts.googleapis.com/css?family=Lato:100,300,400,400i,900');
+@import url('https://fonts.googleapis.com/css?family=Lato:300,300i,900');
 
-body {
- line-height: 1.8;
+html {
+  @media (max-width: 530px) { font-size: 17px; }
+  @media (max-width: 950px) { font-size: 18px; }
+  @media (max-width: 1130px) { font-size: 22px; }
+  @media (min-width: 1130px) { font-size: 24px; }
 }
 
-p {
-  letter-spacing: .05rem;
-  line-height: 2;
+body {
   font-weight: 300;
-  font-size: 1.2em;
+  letter-spacing: .03rem;
 }
 
 h1 {
-  font-weight: 300;
   font-size: 3.5em; 
-  text-shadow: .06em -.01em 0 hsla(340, 60%, 45%, .2);
 }
 
-h2,
-h3,
-h4,
-h5,
-h6 {
-  letter-spacing: initial;
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1.2;
   font-weight: 300;
+  width: @textWidth;
   text-shadow: .06em -.01em 0 hsla(340, 60%, 45%, .2);
 }
 
@@ -34,7 +30,61 @@ p.dek {
   font-weight: 200;
 }
 
-.sidebar {
+p.intro,
+.intro p {
+  max-width: (@textWidth * .8);
+  font-family: @headerFont;
+}
+
+.byline {
+  font-family: @headerFont;
+  font-weight: 200;
+}
+
+.byline:before { 
+  content: "By "; 
+}
+
+time.pubdate {
+  font-family: @headerFont;
+  font-weight: 200;
+}
+
+.subhed {
+  width: @textWidth;
+  margin: 3rem auto 1rem;
+  font-size: 1em;
+  font-weight: bold;
+}
+
+ul, ol {
+  max-width: @textWidth;
+  margin: 1rem auto;
+}
+
+li {
+  margin: .5rem 0;
+}
+
+aside.editors-note {
+  font-style: italic;
+  max-width: @textWidth;
+  margin: 1rem auto;
+}
+
+blockquote {
+  max-width: @textWidth;
+  padding-left: 1rem;
+  margin: 1rem auto;
+  color: hsl(340, 20%, 10%);
+  background-color: @blockquoteBackgroundColor;
+  font-weight: 300;
+  border-left: .5em groove hsl(175, 60%, 40%);
+  // prevent margin collapse:
+  overflow: hidden;
+}
+
+aside.sidebar {
   background: @sidebarBackgroundColor; 
   color: @sidebarColor;
   font-size: 1.0em;
@@ -42,70 +92,105 @@ p.dek {
   border: grey;
 }
 
-//blockquote font weight looks great in 600 as well
-
-blockquote {
-  background-color: @blockquoteBackgroundColor;
-  font-weight: 300;
+// sidebar
+aside.sidebar { 
+  max-width: @textWidth;
+  margin: 1rem auto;
+  padding: 0 0.8em;
+  font-family: @headerFont; 
+  border: 1px solid currentColor;
 }
-//background image first opacity to one alsolooks favorable 
 
+aside.sidebar { 
+  h1, h2, h3, h4, h5, h6 {
+    font-size: 1.5em;
+  }
+}
 
-.pullquote {
+// pullquote
+aside.pullquote {
+  max-width: @textWidth;
+  font-size: 1.4em;
+  color: @pullQuoteColor;
   padding-left: .2em;
   font-style: italic;
   font-weight: 300;
-  clear: both;
   line-height: 1.1;
-  transform: scale(1,1.05);
+  margin: 1rem auto;
 }
 
-a {
-  letter-spacing: initial;
-  border-style: ;
-  border-bottom: .01em solid hsl(60,90%,50%);
-  padding-bottom: .39em;
-  font-weight: 300;
+aside.pullquote .attribution {
+
 }
 
+aside.pullquote .attribution:before {
+  content: "\2014";
+}
+
+
+
+@media @floatBreak {
+
+  aside.pullquote.left,
+  aside.sidebar.left {
+    float: left;
+    clear: both;
+    margin-right: 1rem;
+  }
+
+  aside.pullquote.right,
+  aside.sidebar.right {
+    float: right;
+    clear: both;
+    margin-left: 1rem;
+  }
+
+  aside.pullquote.right,
+  aside.pullquote.left {
+    @oneThirdLine: (@lineHeight / 3) ;
+    margin-top: ~'@{oneThirdLine}rem';
+  }
+
+  aside.sidebar.right,
+  aside.sidebar.left {
+    margin-top: 0;
+  }
+
+}
+
+
+// inline
 ::selection {
   background-color: hsl(320, 80%, 50%);
 }
 
+a {
+  letter-spacing: initial;
+  border-bottom: 0.01em solid hsl(60, 90%, 50%);
+  padding-bottom: 0.39em;
+  font-weight: 300;
+}
+
 .dropcap {
-  float: left; 
   font-size: 7rem;
- 
-  border-radius: .2em;
   font-weight: 300;
   padding: 0.5em;
-
   line-height: .75;
 }
 
-.sunny {
+.dropcap.sunny {
   text-shadow: 1px 1px 30px red;
-  margin: 0 0.2em; 
+  margin-right: 0.7rem; 
   color: hsl(0, 0%, 90%);
   background-image: linear-gradient(to left, 
     hsla(30, 90%, 50%, 1),
-    hsla(30, 60%, 50%, .5));
-  display: inline-block;
-}
-// background color isnt regestering 
-.spacious {
-  font-size: 7;
-  padding: 0 .5em .5em .01em;
+    hsla(30, 60%, 50%, .5)
+  );
 }
 
-.wideleft {
-  font-size: 9em;
-  padding: 0  0 .2em .5em;
-}
-
-.lonely {
-  font-size: 1.3rem;
-  padding: 4.5em;
-  font-weight: bold;
+.dropcap.small {
+  font-size: 1.7rem;
+  padding: 2em;
+  font-weight: 900;
 }
 

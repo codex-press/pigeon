@@ -1,45 +1,54 @@
-@import "../lib/index";
+@import '../lib/index';
+
+html {
+  @media (max-width: 530px) { font-size: 15px; }
+  @media (max-width: 950px) { font-size: 16px; }
+  @media (max-width: 1130px) { font-size: 18px; }
+  @media (min-width: 1130px) { font-size: 20px; }
+}
 
 h1.hed {
   font-weight: normal;
-  font-size: 3.8em;
-  text-align: center;
+  font-size: 2.2em;
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-weight: 400;
+  width: @textWidth;
 }
 
 p.dek {
-  font-size: 2em;
-  //font-style: italic;
-  text-align: center;
-  text-indent: 0;
-}
-
-p.lede {
-  text-indent: 0;
+  font-family: @headerFont;
+  font-weight: 200;
+  font-size: 1.5em;
 }
 
 p.intro,
 .intro p {
-  text-indent: 0;
+  max-width: (@textWidth * .8);
+  font-family: @headerFont;
+}
+
+@supports (hyphens: auto) {
+  p.intro,
+  .intro p {
+    text-align: justify;
+    hyphens: auto;
+  }
 }
 
 .byline {
-
+  font-family: @headerFont;
+  font-weight: 200;
 }
 
 .byline:before { 
   content: "By "; 
 }
 
+
 time.pubdate {
-
-}
-
-p.lede:first-line {
-
+  font-family: @headerFont;
+  font-weight: 200;
 }
 
 .subhed {
@@ -47,145 +56,83 @@ p.lede:first-line {
   margin: 3rem auto 1rem;
   font-size: 1em;
   font-weight: bold;
-  text-indent: 0;
 }
 
-.subhed {
-  h1, h2, h3, h4, h5, h6 {
-    font-size: 1em;
-  }
-}
-
-@supports (hyphens: auto) {
-  p {
-    text-align: justify;
-    hyphens: auto;
-  }
-}
-
-p {
-  margin: 0.3em auto;
-  text-indent: 1em;
-}
-
-section > p:first-child, 
-p.section-start {
-  margin-top: 2em;
-  text-indent: 0;
-}
-
-section > p:first-child:before, 
-p.section-start:before {
-  content: '';
-  display: block;
-  position: relative;
-  left: 25%;
-  width: 50%;
-  border-top: 1px solid currentColor;
-  padding-bottom: 2rem;
-}
-
-
-/* blockquote  */
 
 blockquote {
   max-width: @textWidth;
-  padding-left: 2rem;
+  padding-left: 1rem;
+  border-left: 2px solid grey;
+  text-indent: 1.5em;
   font-style: italic;
   margin: 1rem auto;
+  // prevent margin collapse:
+  overflow: hidden;
 }
 
 
 // dropcap
 .dropcap {
-  font-size: 7rem;
   font-family: @headerFont;
-  color: hsl(0, 0%, 90%);
-  padding: .1em .05em .1em 0 ;
-  margin-left: -1%;
-  padding-right: .05em;
-  display: inline-block;
+  font-size: 4.6rem;
+  padding-right: 0.3rem;
   line-height: .75;
   color: @headerFontColor;
 }
 
-.dropcap.two-lines {
-  font-size: 3.2rem;
-  margin:0 2% -1% 0 ;  
+.dropcap.short {
+  font-size: 3rem;
 }
 
-.dropcap.bord-left {
-  border-left: .2em double crimson;
-  padding-left: .6rem;
+.dropcap.tall {
+  font-size: 8rem;
 }
 
-.dropcap.hollow {
-  color: @bodyBackgroundColor;
-  -webkit-text-stroke: 1px @bodyFontColor;
+.dropcap.padded {
+  font-size: 3em;
+  padding: 0.1em 15% 15% 0.1em;  
 }
 
-.dropcap.corner {
-  border-bottom: 10px double crimson;
-  border-right : 10px solid crimson;
-  margin: .2em;
+@media (min-width: (@textWidth * 1.2)) {
+  .dropcap.pull-left { 
+    margin-left: -2rem;
+  }
 }
 
-.dropcap.cubicle {
-  border-bottom: 10px double crimson;
-  border-top: 10px double crimson;
-  border-right : 5px solid crimson;
-  border-left: 5px solid crimson;
-  margin: 0 .2em 0 0;
-  padding: .1em;
-}
-
-.dropcap.cubicle {
-  border-bottom: 10px double crimson;
-  border-top: 10px double crimson;
-  border-right : 5px solid crimson;
-  border-left: 5px solid crimson;
-  margin: 0 .2em 0 0;
-  padding: .1em;
-}
 
 
 // pullquote
 aside.pullquote {
   max-width: @textWidth;
   margin: 1rem auto;
-  font-size: 1.4em;
-  font-style: italic;
+  font-size: 1.5em;
   line-height: 1.5;
-  text-align: center;
-}
-
-.pullquote:before {
-  content: "\201C";
-  display: block;
-  position: absolute;
-  z-index: -1;
-  font-family: @headerFont;
-  color: @quotemarkColor;
-  font-size: 10em;
-  line-height: .75;
 }
 
 aside.pullquote .attribution {
-
+  font-family: @headerFont;
 }
 
 aside.pullquote .attribution:before {
   content: "\2014";
 }
 
+
 // sidebar
 aside.sidebar { 
   max-width: @textWidth;
   margin: 1rem auto;
   padding: 0 0.8em;
+  font-family: @headerFont; 
   border: 1px solid currentColor;
-  background: @sidebarBackgroundColor;
 }
+
+aside.sidebar { 
+  h1, h2, h3, h4, h5, h6 {
+    font-size: 1.5em;
+  }
+}
+
 
 @media @floatBreak {
 
@@ -205,7 +152,8 @@ aside.sidebar {
 
   aside.pullquote.right,
   aside.pullquote.left {
-    margin-top: -0.3rem;
+    @oneThirdLine: (@lineHeight / 3) ;
+    margin-top: ~'@{oneThirdLine}rem';
   }
 
   aside.sidebar.right,
@@ -233,11 +181,4 @@ aside.editors-note {
   margin: 1rem auto;
 }
 
-
-
-
-
-a {
-  border-bottom: 1px;
-}
 

@@ -49,7 +49,8 @@ article > figure.full-window:first-child {
   figure.right {
     width: 40%;
     clear: both;
-    margin-top: (@lineHeight / 3)~'em';
+    @oneThirdLine: (@lineHeight / 3) ;
+    margin-top: ~'@{oneThirdLine}rem';
   }
 }
 

@@ -1,28 +1,25 @@
 @import '../basic/_variables';
 
-@textWidth: 25rem;
+@headerFont: "stevie-sans", Helvetica, Arial, sans-serif; 
+@bodyFont: "adobe-text-pro", Georgia, Times, "Times New Roman", serif;
 
-@headerFont: "essonnes-headline", Georgia, Times, "Times New Roman", serif; 
-@bodyFont: "adobe-caslon-pro", Georgia, Times, "Times New Roman", serif;
+// dimensions
+@textWidth: 30rem;
+@lineHeight: 1.2;
+@floatBreak: ~'(min-width:' (@textWidth * 2) ~')';
 
+// colors
 @bodyFontColor: hsl(0, 10%, 90%);
 @bodyBackgroundColor: hsl(240, 50%, 10%);
 
+@headerFontColor: ; 
 @photoCreditColor: grey;
 @captionColor: grey;
-@captionSize: .9em;
+@stripedTableColor: #ccc;
+@linedTableColor: black;
+@codeBackgroundColor: ;
 
 @anchorColor: hsl(0, 100%, 25%);
 @anchorHoverColor: hsl(0, 100%, 55%);
 @anchorVisitedColor: grey;
-
-
-// raven specific
-
-@sidebarBackgroundColor: linear-gradient(to right,
-    hsla(240, 90%, 50%, .1),
-    hsla(210, 100%, 50%, .4)
-  );
-
-@quotemarkColor: hsla(190, 100%, 50%, .2);
 

@@ -1,5 +1,12 @@
 @import '../lib/index';
 
+html {
+  @media (max-width: 530px) { font-size: 15px; }
+  @media (max-width: 950px) { font-size: 16px; }
+  @media (max-width: 1130px) { font-size: 18px; }
+  @media (min-width: 1130px) { font-size: 20px; }
+}
+
 h1.hed {
   font-weight: normal;
   font-size: 2.2em;
@@ -54,7 +61,6 @@ time.pubdate {
 
 blockquote {
   max-width: @textWidth;
-  clear: both;
   padding-left: 1rem;
   border-left: 2px solid grey;
   text-indent: 1.5em;
@@ -121,6 +127,12 @@ aside.sidebar {
   border: 1px solid currentColor;
 }
 
+aside.sidebar { 
+  h1, h2, h3, h4, h5, h6 {
+    font-size: 1.5em;
+  }
+}
+
 
 @media @floatBreak {
 
@@ -140,7 +152,8 @@ aside.sidebar {
 
   aside.pullquote.right,
   aside.pullquote.left {
-    margin-top: -0.3rem;
+    @oneThirdLine: (@lineHeight / 3) ;
+    margin-top: ~'@{oneThirdLine}rem';
   }
 
   aside.sidebar.right,
