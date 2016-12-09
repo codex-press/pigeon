@@ -13,7 +13,7 @@ let s = string => string.split(' ');
 let colors = {
   basic: ['default'],
   pigeon: s('default inverted taxi'),
-  raven: s('default'),
+  raven: s('default darkred wicked'),
   owl: s('default celtic coldshoulder ebony goldrush'),
   heron: s('default lemon cherry cyan'),
   toucan: ['default'],
