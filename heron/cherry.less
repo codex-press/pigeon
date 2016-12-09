@@ -1,25 +1,32 @@
 @import "_variables";
 
+//color
 @bodyFontColor:  black;
 @headerFontColor: hsl(40, 90%, 90%);
 @bodyBackgroundColor: hsla(0, 090%, 50%, .40);
 
-@anchorColor: hsla(040, 070%, 75%, 1);
-@anchorHoverColor: hsla(040, 070%, 95%, 1);
+// dimensions
+@textWidth: 34rem;
+@lineHeight: 1.2;
+@floatBreak: ~'(min-width:' (@textWidth * 2) ~')';
 
-@dropCapFontColor: hsla(040, 070%, 95%, 1);
+@photoCreditColor: hsl(220, 90%, 20%);
+@captionColor: hsl(220, 90%, 20%);
 
-@sidebarColor: white;
-@sidebarBackgroundColor: crimson;
+@anchorColor: hsl(60, 90%, 50%);
+@anchorHoverColor: hsl(20, 90%, 50%);
+@anchorVisitedColor: ;
 
-@blockquoteFontStyle: normal;
-@blockquoteBorderLeft: 6px groove yellow;
-@blockquoteColor: yellow;
-@blockquoteBackgroundColor: ;
 
-@pullQuoteColor: hsl(360, 85%, 90%);
 
+// heron specific
+@pullQuoteColor: hsl(240, 90%, 25%);
+
+
+@blockquoteBorderLeft: .5em groove hsl(175, 60%, 40%);
+@blockquoteColor: hsl(340, 20%, 10%);
+@blockquoteBackgroundColor: teal;
+
+@sidebarBackgroundColor: hsla(240, 15%, 50%, 1);
 
 @import "_styles";
-
-
