@@ -65,10 +65,12 @@ time.pubdate {
 }
 
 
+
+
 blockquote {
   max-width: @textWidth;
   padding-left: 1rem;
-  border-left: 2px solid grey;
+  border-left: @blockquoteBorderLeft;
   text-indent: 1.5em;
   font-style: italic;
   margin: 1rem auto;
@@ -113,6 +115,10 @@ aside.pullquote {
   margin: 1rem auto;
   font-size: 1.5em;
   line-height: 1.5;
+  color: @pullQuoteColor;
+
+
+
 }
 
 aside.pullquote .attribution {
@@ -124,13 +130,18 @@ aside.pullquote .attribution:before {
 }
 
 
+
 // sidebar
+// background color and color added
 aside.sidebar { 
   max-width: @textWidth;
   margin: 1rem auto;
   padding: 0 0.8em;
   font-family: @headerFont; 
   border: 1px outset currentColor;
+
+  background-color: @sidebarBackgroundColor;
+  color: @sidebarColor;
 }
 
 aside.sidebar p {
@@ -196,4 +207,9 @@ aside.editors-note {
   color: red;
 }
 
+//drop-cap
+
+.dropcap {
+  color: @dropCapFontColor; 
+}
 
