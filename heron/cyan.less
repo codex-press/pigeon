@@ -5,18 +5,14 @@
 
 @captionColor: hsl(220, 90%, 20%);
 @photoCreditColor: hsl(220, 90%, 20%);
-// fixme
-@stripedTableColor: #ccc;
-@selectionColor: hsl(320, 80%, 50%);
+@stripedTableColor: hsl(175, 80%, 40%);
+@selectionColor: hsl(220, 80%, 30%);
 
 @anchorColor: hsl(60, 90%, 50%);
 @anchorHoverColor: hsl(20, 90%, 50%);
-// fixme
-@anchorVisitedColor: ;
+@anchorVisitedColor: hsl(205, 40%, 45%);
 
-// fixme
-@codeBackgroundColor: ;
-
+@codeBackgroundColor: hsl(0, 0%, 90%) ;
 
 
 // heron
@@ -26,8 +22,8 @@
 
 @pullQuoteColor: hsl(240, 90%, 25%);
 
-// fixme: too intense
-@blockquoteBackgroundColor: teal;
+// placeholder overridden below styles
+@blockquoteBackgroundColor: hsl(0, 0%, 0%);
 
 @sidebarBackgroundColor: linear-gradient(to right,
   hsla(240, 90%, 50%, .1),
@@ -39,3 +35,12 @@
 
 @import "_styles";
 
+blockquote {
+  color: hsl(0, 10%, 90%);
+  background-color: hsl(175, 40%, 45%);
+  border-left: .5em groove teal;
+}
+
+a:visited {
+  border-bottom: hsl(205, 40%, 45%);
+}
