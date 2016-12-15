@@ -13,17 +13,9 @@ h1.hed {
 
 h1, h2, h3, h4, h5, h6 {
   max-width: @textWidth;
+  font-family: @headerFont;
+  color: @headerFontColor;  
   margin: 1rem auto;
-  padding: .2em;
-  padding-right: 1em;
-  font-weight: initial;
-  background-image: linear-gradient(120deg, 
-    hsla( 35, 80%, 50%, .8), 
-    hsla( 40, 80%, 50%, .6), 
-    hsla( 30, 80%, 50%, .3), 
-    hsl(360, 100%, 40%));
-  border-radius: .2em 2em .2em .5em;
-  line-height: 1.2;
 }
 
 p.dek {
@@ -189,29 +181,5 @@ aside.editors-note {
   padding: 0.5em;
   text-shadow: 1px 1px 30px red;
   margin-right: 0.2em; 
-}
-
-a {
-  background: -webkit-linear-gradient(
-    hsl(360, 85%, 40%), 
-    hsl(360, 85%, 20%)
-  );
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  font-weight: thin;
-  border-bottom: .2em;
-}
-
-a:hover {
-  background: -webkit-linear-gradient(
-    hsl(200, 85%, 40%), 
-    hsl(360, 85%, 20%)
-  );
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-a:visited {
-  color: grey;
 }
 

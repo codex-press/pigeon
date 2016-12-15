@@ -1,12 +1,18 @@
 
 & {
-  font-family: @bodyFont;
-  color: @bodyFontColor;
-  background: @bodyBackgroundColor;
+  font-family: @font;
+  color: @fontColor;
+  background: @backgroundColor;
+  line-height: @lineHeight;
   a { color: @anchorColor; }
   a.not-visited { color: @anchorColor; }
   a.visited { color: @anchorVisitedColor; }
   a:hover { color: @anchorHoverColor; }
-  &.swatch:before { color: @bodyFontColor; }
+  &.swatch:before { color: @fontColor; }
+
+  &:not(p) > address.byline {
+    max-width: @textWidth;
+    margin: 0 auto;
+  }
 }
 

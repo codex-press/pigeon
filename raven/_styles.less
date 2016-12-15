@@ -1,6 +1,5 @@
 @import '../lib/index';
 
-
 html {
   @media (max-width: 530px) { font-size: 15px; }
   @media (max-width: 950px) { font-size: 16px; }
@@ -16,6 +15,7 @@ h1.hed {
 h1, h2, h3, h4, h5, h6 {
   max-width: @textWidth;
   font-family: @headerFont;
+  color: @headerFontColor;  
 }
 
 p {
@@ -72,7 +72,6 @@ blockquote {
   padding-left: 1rem;
   border-left: @blockquoteBorderLeft;
   text-indent: 1.5em;
-  font-style: italic;
   margin: 1rem auto;
   // prevent margin collapse:
   overflow: hidden;
@@ -85,7 +84,7 @@ blockquote {
   font-size: 4.6rem;
   padding-right: 0.3rem;
   line-height: .75;
-  color: @headerFontColor;
+  color: @dropCapFontColor; 
 }
 
 .dropcap.short {
@@ -129,24 +128,19 @@ aside.pullquote .attribution:before {
   content: "\2014";
 }
 
-
-
-// sidebar
-// background color and color added
 aside.sidebar { 
   max-width: @textWidth;
   margin: 1rem auto;
   padding: 0 0.8em;
   font-family: @headerFont; 
   border: 1px outset currentColor;
-
-  background-color: @sidebarBackgroundColor;
+  background: @sidebarBackground;
   color: @sidebarColor;
 }
 
 aside.sidebar p {
   mix-blend-mode: exclusion ;
-  margin: 1.5em;
+  margin: 1.5em 0;
 }
 
 aside.sidebar { 
@@ -202,14 +196,8 @@ aside.editors-note {
   margin: 1rem auto;
 }
 
-//text on an image
+// text on an image
 .dark-text {
   color: red;
-}
-
-//drop-cap
-
-.dropcap {
-  color: @dropCapFontColor; 
 }
 

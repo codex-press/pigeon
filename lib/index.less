@@ -1,14 +1,15 @@
 
+html {
+  font-family: @font;
+  color: @fontColor;
+  background-color: @backgroundColor;
+}
+
 body {
-  font-family: @bodyFont;
-  color: @bodyFontColor;
-  background: @bodyBackgroundColor;
   line-height: @lineHeight;
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: @headerFont;
-  color: @headerFontColor;  
   margin: 1rem auto;
 }
 
@@ -65,9 +66,16 @@ section > p:first-child,
 
 }
 
+// Inline
+// ------
+
 .dropcap {
   display: inline-block;
   float: left;
+}
+
+::selection {
+  background-color: @selectionColor;
 }
 
 code {

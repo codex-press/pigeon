@@ -15,6 +15,7 @@ h1.hed {
 
 h1, h2, h3, h4, h5, h6 {
   font-weight: 400;
+  font-family: @headerFont;
 }
 
 p.dek {
@@ -74,6 +75,11 @@ p.lede:first-line {
   }
 }
 
+p {
+  margin: 0.3em auto;
+  text-indent: 1em;
+}
+
 @supports (hyphens: auto) {
   p {
     text-align: justify;
@@ -81,9 +87,9 @@ p.lede:first-line {
   }
 }
 
-p {
-  margin: 0.3em auto;
-  text-indent: 1em;
+.no-indent p,
+p.no-indent {
+  text-indent: 0;
 }
 
 section > p:first-child, 
@@ -118,13 +124,11 @@ blockquote {
 .dropcap {
   font-size: 7rem;
   font-family: @headerFont;
-  color: hsl(0, 0%, 90%);
   padding: .1em .05em .1em 0 ;
   margin-left: -1%;
   padding-right: .05em;
   display: inline-block;
   line-height: .75;
-  color: @headerFontColor;
 }
 
 .dropcap.two-lines {
@@ -138,8 +142,8 @@ blockquote {
 }
 
 .dropcap.hollow {
-  color: @bodyBackgroundColor;
-  -webkit-text-stroke: 1px @bodyFontColor;
+  color: @backgroundColor;
+  -webkit-text-stroke: 1px @fontColor;
 }
 
 .dropcap.corner {

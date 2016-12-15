@@ -1,4 +1,60 @@
 
 @import '_variables';
+
+@fontColor: hsl(300, 0%, 10%);
+@backgroundColor: hsla(30, 80%, 50%, 1); 
+
+@captionColor: hsl(350, 100%, 40%);
+@photoCreditColor: hsl(350, 100%, 40%);
+// fixme
+@stripedTableColor: #ccc;
+// fixme
+@selectionColor: ;
+
+@anchorColor: hsl(0, 100%, 25%);
+@anchorHoverColor: hsl(0, 100%, 55%);
+@anchorVisitedColor: grey;
+
+@codeBackgroundColor: ;
+
+// toucan
+
+@headerFontColor: hsl(300, 100%, 10%);
+
 @import '_styles';
+
+
+// the toucan beak
+
+h1.hed {
+  padding: .2em;
+  padding-right: 1em;
+  font-weight: initial;
+  border-radius: .2em 2em .2em .5em;
+  line-height: 1.2;
+  background-image: linear-gradient(120deg, 
+    hsla( 35, 80%, 50%, .8), 
+    hsla( 40, 80%, 50%, .6), 
+    hsla( 30, 80%, 50%, .3), 
+    hsl(360, 100%, 40%)
+  );
+}
+
+// fixme these are not working because when they wrap to two lines
+// it gets messed up
+a {
+  background: -webkit-linear-gradient(
+    hsl(360, 85%, 40%), 
+    hsl(360, 85%, 20%)
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+a:hover {
+  background: -webkit-linear-gradient(
+    hsl(200, 85%, 40%), 
+    hsl(360, 85%, 20%)
+  );
+}
 
