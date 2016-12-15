@@ -8,33 +8,56 @@
 @stripedTableColor: #ccc;
 @selectionColor: hsl(320, 80%, 50%);
 
-@anchorColor: hsl(90, 10%, 50%);
-@anchorHoverColor: hsl(20, 90%, 50%);
-// fixme
-@anchorVisitedColor: ;
+@anchorColor: hsl(200, 100%, 50%);
+@anchorHoverColor: white;
+//overriden
+@anchorVisitedColor: hsl(200, 100%, 50%);
 
-// fixme
-@codeBackgroundColor: ;
-
+//overriden
+@codeBackgroundColor: hsl(0, 0%, 0%,);
 
 
 // heron
 
-@headerFontColor: ;
-@headerTextShadow: hsla(340, 60%, 45%, .2);
+@headerFontColor: hsl(210, 20%, 30%);
+@headerTextShadow: hsl(240, 60%, 85%);
 
 @pullQuoteColor: hsl(240, 90%, 25%);
 
-// fixme: too intense
-@blockquoteBackgroundColor: teal;
+@blockquoteBackgroundColor: hsl(0, 0%, 95%);
 
 @sidebarBackgroundColor: linear-gradient(to right,
-  hsla(240, 90%, 50%, .1),
-  hsla(210, 100%, 50%, .4)
+  hsl(210, 30%, 90%),
+  hsl(210, 30%, 90%)
 );
 
 @anchorUnderlineColor: hsl(60, 90%, 50%);
-@achorHoverBackgroundColor: hsl(60, 90%, 50%);
+@achorHoverBackgroundColor: hsl(15, 90%, 45%);
 
 @import '_styles';
 
+a {
+  border-bottom: 1px solid hsl(200, 100%, 50%);
+}
+
+a:hover {
+  background: hsl(225, 100%, 70%);
+}
+
+a:visited {
+  color: hsl(0, 0%, 5%);
+  background-color: hsl(0, 5%, 40%);
+  border-bottom: 1px solid hsl(0, 5%, 40%);
+}
+
+code {
+//  border: 1px solid hsl(210, 20%, 30%);
+  color: black;
+  background-color: white;
+}
+
+blockquote {
+  color: hsl(0, 10%, 20%);
+  background-color: hsl(55, 100%, 70%);
+  border-left: .5em groove hsl(55, 100%, 70%);
+}
