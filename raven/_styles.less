@@ -34,6 +34,10 @@ p.intro,
   font-family: @headerFont;
 }
 
+// text on an image
+figure.dark-text {
+  color: red;
+}
 @supports (hyphens: auto) {
   p.intro,
   .intro p {
@@ -64,8 +68,10 @@ time.pubdate {
   font-weight: bold;
 }
 
-
-
+code {
+  color: hsl(240, 50%, 10%);
+  background-color: white;
+}
 
 blockquote {
   max-width: @textWidth;
@@ -196,8 +202,5 @@ aside.editors-note {
   margin: 1rem auto;
 }
 
-// text on an image
-.dark-text {
-  color: red;
-}
+
 
