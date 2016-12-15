@@ -1,49 +1,56 @@
 @import "_variables";
 
 @fontColor:  hsl(125, 000%, 20%);
-@backgroundColor: hsla(55, 100%, 70%, .9); 
+@backgroundColor: hsl(55, 100%, 70%); 
 
-// fixme
-@captionColor: hsl(220, 90%, 20%);
-// fixme
-@photoCreditColor: hsl(220, 90%, 20%);
-// fixme
-@stripedTableColor: #ccc;
-// fixme
-@selectionColor: hsl(320, 80%, 50%);
+@captionColor: hsl(25, 95%, 30%);
+@photoCreditColor: hsl(25, 95%, 30%);
+@stripedTableColor: hsl(25, 55%, 60%);
+@selectionColor: hsl(15, 90%, 50%);
 
-// fixme
-@anchorColor: hsl(40, 70%, 75%);
-// fixme
+@anchorColor: hsl(15, 90%, 45%);
 @anchorHoverColor: hsl(40, 70%, 95%);
-// fixme
-@anchorVisitedColor: ;
+//overriden below styles
+@anchorVisitedColor: hsl(0, 0%, 0%);
 
-// fixme
-@codeBackgroundColor: ;
-
-
+@codeBackgroundColor: hsl(0, 0%, 95%);
 
 // heron
 
 @headerFontColor: hsl(125, 000%, 20%);
 @headerTextShadow: hsla(340, 60%, 45%, .2);
 
-@pullQuoteColor: hsl(240, 90%, 25%);
+@pullQuoteColor: hsl(340, 100%, 35%);
 
-// fixme: too intense
 @blockquoteBackgroundColor: teal;
 
 @sidebarBackgroundColor: linear-gradient(to right,
-  hsla(240, 90%, 50%, .1),
-  hsla(210, 100%, 50%, .4)
+  hsl(40, 70%, 70%),
+  hsl(00, 70%, 70%)
 );
 
-// fixme
+//overriden
 @anchorUnderlineColor: hsl(60, 90%, 50%);
-// fixme
 @achorHoverBackgroundColor: hsl(60, 90%, 50%);
 
 @import "_styles";
 
+a {
+  border-bottom: 1px solid hsl(15, 90%, 45%);
+}
 
+a:hover {
+  background: hsl(15, 90%, 45%);
+}
+
+a:visited {
+  color: hsl(0, 0%, 5%);
+  background-color: hsl(0, 0%, 5%);
+  border-bottom: 1px solid hsl(0, 0%, 5%);
+}
+
+blockquote {
+  color: hsl(0, 10%, 20%);
+  background-color: hsl(55, 100%, 70%);
+  border-left: .5em groove hsl(55, 100%, 70%);
+}
