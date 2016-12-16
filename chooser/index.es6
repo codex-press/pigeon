@@ -15,7 +15,7 @@ let colors = {
   pigeon: s('default inverted taxi goldrush'),
   owl: s('default celtic coldshoulder ebony'),
   heron: s('default lemon cherry cyan'),
-  raven: s('default darkred wicked'),
+  raven: s('default darkred wicked coward'),
   toucan: ['default'],
 };
 
