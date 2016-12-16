@@ -2,12 +2,12 @@
 @import '_variables';
 
 @fontColor: hsl(300, 0%, 10%);
-@backgroundColor: hsl(30, 80%, 50%); 
+@backgroundColor: hsl(0, 90%, 70%); 
 
 @captionColor: hsl(350, 100%, 40%);
 @photoCreditColor: hsl(350, 100%, 40%);
 @stripedTableColor: hsl(30, 90%, 40%);
-@selectionColor: ;
+@selectionColor: yellow;
 
 @anchorColor: hsl(0, 100%, 25%);
 @anchorHoverColor: hsl(0, 100%, 55%);
@@ -38,8 +38,6 @@ h1.hed {
   );
 }
 
-// fixme these are not working because when they wrap to two lines
-// it gets messed up
 a {
   background: -webkit-linear-gradient(
     hsl(360, 85%, 40%), 
@@ -50,9 +48,6 @@ a {
 }
 
 a:hover {
-  background: linear-gradient(
-    hsl(200, 85%, 40%), 
-    hsl(360, 85%, 20%)
-  );
+  color: white;
 }
 

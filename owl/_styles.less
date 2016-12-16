@@ -201,11 +201,24 @@ aside.pullquote .attribution:before {
 }
 
 // sidebar
+
+aside.sidebar::before {
+  content: " ";
+  display: block;
+  border-top: 1px solid @fontColor;
+}
+
+aside.sidebar::after {
+  content: " ";
+  display: block;
+  padding-top: 1em;
+  border-bottom: 1px solid @fontColor;
+}
+
 aside.sidebar { 
   max-width: @textWidth;
   margin: 1rem auto;
   padding: 0 0.8em;
-  border: 1px solid currentColor;
 }
 
 @media @floatBreak {
