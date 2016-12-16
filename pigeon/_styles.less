@@ -125,7 +125,7 @@ aside.sidebar {
   margin: 1rem auto;
   padding: 0 0.8em;
   font-family: @headerFont; 
-  border: 1px solid currentColor;
+  border: 2px dotted currentColor;
 }
 
 aside.sidebar { 
@@ -160,6 +160,8 @@ aside.sidebar {
   aside.sidebar.right,
   aside.sidebar.left {
     margin-top: 0;
+    max-width: (@textWidth * .8);
+    border: none;
   }
 
 }
