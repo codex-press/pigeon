@@ -1,3 +1,7 @@
+@mobile:  ~"(max-width: 450px)";
+@tablet:  ~"(min-width: 451px) and (max-width: 800px)";
+@laptop:  ~"(min-width: 801px) and (max-width: 1100px)";
+@desktop: ~"(min-width: 1101px)";
 
 html {
   font-family: @font;
@@ -11,23 +15,51 @@ body {
 
 h1, h2, h3, h4, h5, h6 {
   margin: 1rem auto;
+  line-height: 1.2;
 }
 
-h1 { font-size: 2.986em; }
-h2 { font-size: 2.488em; }
-h3 { font-size: 2.074em; }
-h4 { font-size: 1.728em; }
-h5 { font-size: 1.440em; }
-h6 { font-size: 1.200em; }
+@h1Size: 2.986em;
+@h2Size: 2.488em;
+@h3Size: 2.074em;
+@h4Size: 1.728em;
+@h5Size: 1.440em;
+@h6Size: 1.200em;
+
+h1    { font-size: @h1Size; }
+h2    { font-size: @h2Size; }
+h3    { font-size: @h3Size; }
+h4    { font-size: @h4Size; }
+h5    { font-size: @h5Size; }
+h6    { font-size: @h6Size; }
+p.dek { font-size: @dekSize; }
+
+.headers(@size, @multiplier) {
+  .@{size}      { font-size: ~'@{multiplier}em'; }
+  h1.@{size}    { font-size: (@h1Size * @multiplier); }
+  h2.@{size}    { font-size: (@h2Size * @multiplier); }
+  h3.@{size}    { font-size: (@h3Size * @multiplier); }
+  h4.@{size}    { font-size: (@h4Size * @multiplier); }
+  h5.@{size}    { font-size: (@h5Size * @multiplier); }
+  h6.@{size}    { font-size: (@h6Size * @multiplier); }
+  p.dek.@{size} { font-size: (@dekSize * @multiplier); }
+}
+
+.headers(xxlarge, 3);
+.headers(xlarge, 2);
+.headers(large, 1.5);
+.headers(small, .8);
+.headers(xsmall, .5);
 
 
 p {
-  max-width: @textWidth;
+  width: @textWidth;
+  max-width: 100%;
   margin: 1rem auto;
 }
 
 :not(p) > address.byline {
-  max-width: @textWidth;
+  width: @textWidth;
+  max-width: 100%;
   margin: 0 auto;
 }
 
@@ -38,7 +70,8 @@ p > address.byline {
 // when it's inside a div it acts like a <p>
 div > time.pubdate {
   display: block;
-  max-width: @textWidth;
+  width: @textWidth;
+  max-width: 100%;
   margin: 0 auto;
 }
 
@@ -52,16 +85,40 @@ section > p:first-child,
   margin-top: 4em;
 }
 
+.subhed {
+  h1&, h2&, h3&, h4&, h5&, h6& {
+    width: @textWidth;
+    max-width: 100%;
+  }
+}
+
+blockquote, aside, ul, ol {
+  width: @textWidth;
+  max-width: 100%;
+}
+
 @media @floatBreak {
 
-  .left p,
-  p.left {
-    margin-left: 0;
+  .left {
+    p, h1, h2, h3, h4, h5, h6,
+    time.pubdate,
+    address.byline,
+    .share-menu,
+    .subhed,
+    p&  {
+      margin-left: 0;
+    }
   }
 
-  .right p,
-  p.right {
-    margin-right: 0;
+  .right {
+    p, h1, h2, h3, h4, h5, h6,
+    time.pubdate,
+    address.byline,
+    .share-menu,
+    .subhed,
+    p& {
+      margin-right: 0;
+    }
   }
 
 }
@@ -100,10 +157,12 @@ a:visited {
 }
 
 .share-menu {
+  width: @textWidth;
+  max-width: 100%;
   font-size: 1.5rem;
   position: relative;
   text-align: center;
-  margin: 1em;
+  margin: 1em auto;
 }
 
 .share-menu a {
@@ -111,7 +170,6 @@ a:visited {
   text-decoration: none;
   margin: .5em;
 }
-
 
 @import "figure";
 @import "table";

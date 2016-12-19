@@ -1,5 +1,7 @@
 
+
 & {
+
   font-family: @font;
   color: @fontColor;
   background: @backgroundColor;
@@ -14,5 +16,13 @@
     max-width: @textWidth;
     margin: 0 auto;
   }
+
+  // the scoped nature of h1 etc. override this setting from app stylesheet
+  figure .frame {
+    & > p, & > h1, & > h2, & > h3, & > h4, & > h5, & > h6 {
+      margin: 0.5rem;
+    }
+  }
+
 }
 

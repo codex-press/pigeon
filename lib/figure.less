@@ -1,5 +1,6 @@
 figure {
-  max-width: @textWidth;
+  width: @textWidth;
+  max-width: 100%;
   max-height: 100vh;
   margin: 1rem auto;
 }
@@ -9,110 +10,135 @@ figcaption {
   font-size: .9em;
 }
 
-
-
-figure.full-width {
-  max-width: initial;
-  margin: 1rem -1rem;
-}
-
-figure.full-height {
-  height: 100vh;
-  margin: 1rem -1rem;
-}
-
+figure.full-width,
 figure.full-window {
-  max-width: initial;
-  height: 100vh;
   margin: 1rem -1rem;
 }
 
-article > figure.full-window:first-child {
+// at the top of the story it's got no margin
+article > figure.full-window:first-child,
+article > :first-child > figure.full-window:first-child {
   margin-top: 0;
 }
 
+// prevent margin collapse with children
+div.left, section.left, div.right, section.left {
+  border-top: 1px solid transparent;
+}
 
 @media @floatBreak { 
 
+  figure.left,
+  figure.right {
+    width: calc(50% - 1rem);
+    clear: both;
+    @oneThirdLine: (@lineHeight / 3);
+    margin-top: ~'@{oneThirdLine}rem';
+  }
+
   figure.left {
     float: left;
-    margin: 1rem;
+    margin-right: 1rem;
   }
 
   figure.right {
     float: right;
-    margin: 1rem;
+    margin-left: 1rem;
   }
 
-  figure.left,
-  figure.right {
-    width: 40%;
-    clear: both;
-    @oneThirdLine: (@lineHeight / 3) ;
-    margin-top: ~'@{oneThirdLine}rem';
-  }
-}
-
-// on very large screens they take up more space
-@media (min-width: 1400px) {
-
-  figure.left {
-    margin-left: 10%;
+  figure.left:first-child,
+  figure.right:first-child {
+    margin-top: 0;
   }
 
-  figure.right {
-    margin-right: 10%;
+  // so if the text is of to the side, the figure takes up remaining space
+  .right figure.left, 
+  .left figure.right {
+    width: calc(100% - @textWidth);
+  }
+  .right figure.left {
+    margin-left: -1rem;
+  }
+  .left figure.right {
+    margin-right: -1rem;
   }
 
 }
+
+
+// // on very large screens they take up more space
+// @media (min-width: 1400px) {
+
+//   // this keeps it half into the center text column
+//   figure.left {
+//     margin-left: calc(10% - (@textWidth/2));
+//   }
+
+//   figure.right {
+//     margin-right: calc(10% - (@textWidth/2));
+//   }
+
+// }
 
 
 // positioning [x-cp-overlay]
-html.javascript figure .top {
-  position: absolute;
-  top: 0;
-}
-html.javascript figure .right {
-  position: absolute;
-  right: 0;
-}
-html.javascript figure .bottom {
-  position: absolute;
-  bottom: 0;
-}
-html.javascript figure .left {
-  position: absolute;
-  left: 0;
-}
-
-.content-bottom {
-  display: flex;
-  align-items: flex-end;
-}
-
-
-figure {
-  p,
-  h1, 
-  h2, 
-  h3, 
-  h4, 
-  h5, 
-  h6 {
-    max-width: initial;
-    margin: 0;
+[x-cp-overlay] {
+  .content-bottom {
+    display: flex;
+    align-items: flex-end;
   }
+
+  .content-bottom-right {
+    display: flex;
+    align-items: flex-end;
+  }
+
+  .content-bottom-center {
+    display: flex;
+    align-items: flex-end;
+  }
+
+  // center vertically
+  .content-center {
+
+  }
+
+  .content-center-left {
+    display: flex;
+    align-items: flex-end;
+  }
+
+  .content-center-right {
+    display: flex;
+    align-items: flex-end;
+  }
+
+
+  // top
+  .content-center {
+    display: flex;
+    align-items: flex-end;
+  }
+
+  .content-right {
+
+  }
+
 }
+
 
 figure .frame {
-  &,
-  h1, 
-  h2, 
-  h3, 
-  h4, 
-  h5, 
-  h6 {
-    color: white;
+  p, aside, h1, h2, h3, h4, h5, h6 {
+    max-width: initial;
+    color: #eee;
+  }
+
+  .light-background {
+    background: hsla(0, 100%, 100%, .65);
+  }
+
+  .dark-background {
+    background: hsla(0, 0%, 0%, .65);
   }
 }
 
@@ -124,21 +150,13 @@ figure.dark-text {
   h4, 
   h5, 
   h6 {
-    color: @fontColor;
+    color: #111;
   }
 }
 
-//text background on top of images 
 
-.light-background {
-  background: hsla(0, 100%, 100%, .65);
-}
 
-.dark-background {
-  background: hsla(0, 0%, 000%, .65);
-}
-
-html.javascript figure {
+html.javascript [x-cp-figure] {
 
   .top {
     position: absolute;

@@ -2,10 +2,10 @@
 @import '../lib/index';
 
 html {
-  @media (max-width: 530px) { font-size: 15px; }
-  @media (max-width: 950px) { font-size: 16px; }
-  @media (max-width: 1130px) { font-size: 18px; }
-  @media (min-width: 1130px) { font-size: 20px; }
+  @media @mobile { font-size: 15px; }
+  @media @tablet { font-size: 16px; }
+  @media @laptop { font-size: 18px; }
+  @media @desktop { font-size: 20px; }
 }
 
 h1.hed {
@@ -13,7 +13,8 @@ h1.hed {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  max-width: @textWidth;
+  width: @textWidth;
+  max-width: 100%;
 }
 
 p.dek {
@@ -21,10 +22,11 @@ p.dek {
 }
 
 .subhed {
-  width: @textWidth;
-  margin: 3rem auto 1rem;
-  font-size: 1em;
-  font-weight: bold;
+  h1&, h2&, h3&, h4&, h5&, h6& {
+    margin: 3rem auto 1rem;
+    font-size: 1em;
+    font-weight: bold;
+  }
 }
 
 p.intro,
@@ -34,12 +36,10 @@ p.intro,
 
 aside.editors-note {
   font-style: italic;
-  max-width: @textWidth;
   margin: 1rem auto;
 }
 
 aside.pullquote {
-  max-width: @textWidth;
   margin: 1rem auto;
   font-style: italic;
   font-size: 1.4em;
@@ -51,7 +51,6 @@ aside.pullquote .attribution:before {
 }
 
 aside.sidebar { 
-  max-width: @textWidth;
   margin: 1rem auto;
   padding: 0 1rem;
   border: 1px solid grey;

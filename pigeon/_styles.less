@@ -1,15 +1,14 @@
 @import '../lib/index';
 
 html {
-  @media (max-width: 530px) { font-size: 15px; }
-  @media (max-width: 950px) { font-size: 16px; }
-  @media (max-width: 1130px) { font-size: 18px; }
-  @media (min-width: 1130px) { font-size: 20px; }
+  @media @mobile { font-size: 15px; }
+  @media @tablet { font-size: 16px; }
+  @media @laptop { font-size: 18px; }
+  @media @desktop { font-size: 20px; }
 }
 
 h1.hed {
-  font-weight: normal;
-  font-size: 2.2em;
+//  font-size: 2.2em;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -20,7 +19,6 @@ h1, h2, h3, h4, h5, h6 {
 p.dek {
   font-family: @headerFont;
   font-weight: 200;
-  font-size: 1.5em;
 }
 
 p.intro,
@@ -61,7 +59,6 @@ time.pubdate {
 
 
 blockquote {
-  max-width: @textWidth;
   padding-left: 1rem;
   border-left: 2px solid grey;
   text-indent: 1.5em;
@@ -182,6 +179,10 @@ aside.editors-note {
   font-style: italic;
   max-width: @textWidth;
   margin: 1rem auto;
+}
+
+figcaption {
+  font-family: @headerFont;
 }
 
 

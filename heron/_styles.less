@@ -3,10 +3,10 @@
 @import url('https://fonts.googleapis.com/css?family=Lato:300,300i,900');
 
 html {
-  @media (max-width: 530px) { font-size: 17px; }
-  @media (max-width: 950px) { font-size: 18px; }
-  @media (max-width: 1130px) { font-size: 22px; }
-  @media (min-width: 1130px) { font-size: 24px; }
+  @media @mobile { font-size: 17px; }
+  @media @tablet { font-size: 18px; }
+  @media @laptop { font-size: 22px; }
+  @media @desktop { font-size: 24px; }
 }
 
 body {
@@ -20,14 +20,14 @@ h1 {
 
 h1, h2, h3, h4, h5, h6 {
   color: @headerFontColor;
-  max-width: @textWidth;
+  width: @textWidth;
+  max-width: 100%;
   line-height: 1.2;
   font-weight: 300;
   text-shadow: .06em -.01em 0 @headerTextShadow;
 }
 
 p.dek {
-  font-size: 2em;
   font-weight: 200;
 }
 
@@ -56,7 +56,6 @@ time.pubdate {
 }
 
 ul, ol {
-  max-width: @textWidth;
   margin: 1rem auto;
 }
 
