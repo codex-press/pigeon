@@ -18,7 +18,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 p.dek {
-  font-size: 1.5em;
+
 }
 
 .subhed {
@@ -81,7 +81,8 @@ aside.sidebar {
 
   aside.pullquote.right,
   aside.pullquote.left {
-    margin-top: -0.3rem;
+    @oneThirdLine: (@lineHeight / 3);
+    margin-top: ~'@{oneThirdLine}rem';
   }
 
   aside.sidebar.right,
@@ -107,13 +108,11 @@ aside.sidebar {
 }
 
 blockquote {
-  max-width: @textWidth;
   margin: 1rem auto;
   padding: 0 2rem;
 }
 
 ul, ol {
-  max-width: @textWidth;
   margin: 1rem auto;
 }
 

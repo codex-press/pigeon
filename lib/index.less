@@ -18,29 +18,24 @@ h1, h2, h3, h4, h5, h6 {
   line-height: 1.2;
 }
 
-@h1Size: 2.986em;
-@h2Size: 2.488em;
-@h3Size: 2.074em;
-@h4Size: 1.728em;
-@h5Size: 1.440em;
-@h6Size: 1.200em;
 
 h1    { font-size: @h1Size; }
-h2    { font-size: @h2Size; }
-h3    { font-size: @h3Size; }
-h4    { font-size: @h4Size; }
-h5    { font-size: @h5Size; }
-h6    { font-size: @h6Size; }
 p.dek { font-size: @dekSize; }
+
+h2    { font-size: 2.488em; }
+h3    { font-size: 2.074em; }
+h4    { font-size: 1.728em; }
+h5    { font-size: 1.440em; }
+h6    { font-size: 1.200em; }
+
+@h1Size: 2.986em;
+
+
+
 
 .headers(@size, @multiplier) {
   .@{size}      { font-size: ~'@{multiplier}em'; }
   h1.@{size}    { font-size: (@h1Size * @multiplier); }
-  h2.@{size}    { font-size: (@h2Size * @multiplier); }
-  h3.@{size}    { font-size: (@h3Size * @multiplier); }
-  h4.@{size}    { font-size: (@h4Size * @multiplier); }
-  h5.@{size}    { font-size: (@h5Size * @multiplier); }
-  h6.@{size}    { font-size: (@h6Size * @multiplier); }
   p.dek.@{size} { font-size: (@dekSize * @multiplier); }
 }
 
@@ -50,6 +45,12 @@ p.dek { font-size: @dekSize; }
 .headers(small, .8);
 .headers(xsmall, .5);
 
+
+// these could easily have words that are bigger than one line and they 
+// should at least wrap so they can be read
+h1.large, h1.xlarge, h1.xxlarge {
+  word-wrap: break-word;
+}
 
 p {
   width: @textWidth;
@@ -104,6 +105,7 @@ blockquote, aside, ul, ol {
     time.pubdate,
     address.byline,
     .share-menu,
+    .text-width,
     .subhed,
     p&  {
       margin-left: 0;
@@ -115,9 +117,36 @@ blockquote, aside, ul, ol {
     time.pubdate,
     address.byline,
     .share-menu,
+    .text-width,
     .subhed,
     p& {
       margin-right: 0;
+    }
+  }
+
+  .slight-left {
+    p, h1, h2, h3, h4, h5, h6,
+    figure:not(.left):not(.right),
+    time.pubdate,
+    address.byline,
+    .share-menu,
+    .text-width,
+    .subhed,
+    p&  {
+      margin-left: calc(33% - (@textWidth/2));
+    }
+  }
+
+  .slight-right {
+    p, h1, h2, h3, h4, h5, h6,
+    figure:not(.left):not(.right),
+    time.pubdate,
+    address.byline,
+    .share-menu,
+    .text-width,
+    .subhed,
+    p&  {
+      margin-right: calc(33% - (@textWidth/2));
     }
   }
 

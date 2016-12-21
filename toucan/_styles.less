@@ -12,7 +12,8 @@ h1.hed {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  max-width: @textWidth;
+  width: @textWidth;
+  max-width: 100%;
   font-family: @headerFont;
   color: @headerFontColor;  
   margin: 1rem auto;
@@ -23,17 +24,12 @@ p.dek {
   font-size: 1.5em;
 }
 
-p.intro,
-.intro p {
-  max-width: (@textWidth * .8);
-  font-family: @headerFont;
-}
+.intro {
 
-.byline {
-  font-family: Helvetica, Arial, sans;
 }
 
 .byline:before { 
+
 }
 
 time.pubdate {
@@ -46,18 +42,18 @@ p.lede:first-line {
 }
 
 
-.subhed {
-  max-width: @textWidth;
-  margin: 3rem auto 1rem;
-  font-size: 1em;
-  font-weight: bold;
+h1, h2, h3, h4, h5, h6 {
+  &.subhed {
+    margin: 3rem auto 1rem;
+    font-size: 1em;
+    font-weight: bold;
+  }
 }
 
 
 // blockquote
 
 blockquote {
-  max-width: @textWidth;
   padding-left: 1rem;
   color: hsl(220, 50%, 20%);
   text-indent: 1.5em;
@@ -70,7 +66,6 @@ blockquote {
 
 // pullquote
 aside.pullquote {
-  max-width: @textWidth;
   margin: 1rem auto;
   font-size: 1.5em;
   font-style: italic;
@@ -89,7 +84,6 @@ aside.pullquote .attribution:before {
 
 // sidebar
 aside.sidebar { 
-  max-width: @textWidth;
   margin: 1rem auto;
   padding: 0 0.8em;    
   font-family: Helvetica, Arial, sans;
@@ -156,7 +150,6 @@ aside.sidebar {
 
 
 ul, ol {
-  max-width: @textWidth;
   margin: 1rem auto;
 }
 
@@ -166,7 +159,6 @@ li {
 
 aside.editors-note {
   font-style: italic;
-  max-width: @textWidth;
   margin: 1rem auto;
 }
 

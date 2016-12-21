@@ -168,6 +168,10 @@ blockquote {
   padding: .1em;
 }
 
+aside.editors-note {
+  font-style: italic;
+  margin: 1rem auto;
+}
 
 // pullquote
 aside.pullquote {
@@ -237,7 +241,8 @@ aside.sidebar {
 
   aside.pullquote.right,
   aside.pullquote.left {
-    margin-top: -0.3rem;
+    @oneThirdLine: (@lineHeight / 3);
+    margin-top: ~'@{oneThirdLine}rem';
   }
 
   aside.sidebar.right,
@@ -248,26 +253,13 @@ aside.sidebar {
 }
 
 
-
 ul, ol {
-  max-width: @textWidth;
   margin: 1rem auto;
 }
 
 li {
   margin: .5rem 0;
 }
-
-
-aside.editors-note {
-  font-style: italic;
-  max-width: @textWidth;
-  margin: 1rem auto;
-}
-
-
-
-
 
 a {
   border-bottom: 1px;

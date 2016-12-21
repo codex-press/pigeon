@@ -12,7 +12,8 @@ h1.hed {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  max-width: @textWidth;
+  width: @textWidth;
+  max-width: 100%;
   font-family: @headerFont;
 }
 
@@ -21,15 +22,13 @@ p.dek {
   font-weight: 200;
 }
 
-p.intro,
-.intro p {
+.intro {
   max-width: (@textWidth * .8);
   font-family: @headerFont;
 }
 
 @supports (hyphens: auto) {
-  p.intro,
-  .intro p {
+  .intro {
     text-align: justify;
     hyphens: auto;
   }
@@ -44,19 +43,16 @@ p.intro,
   content: "By "; 
 }
 
-
 time.pubdate {
   font-family: @headerFont;
   font-weight: 200;
 }
 
 .subhed {
-  max-width: @textWidth;
   margin: 3rem auto 1rem;
   font-size: 1em;
   font-weight: bold;
 }
-
 
 blockquote {
   padding-left: 1rem;
@@ -68,39 +64,20 @@ blockquote {
   overflow: hidden;
 }
 
+aside.editors-note {
+  font-style: italic;
+  margin: 1rem auto;
+}
 
-// dropcap
-.dropcap {
+figcaption {
   font-family: @headerFont;
-  font-size: 4.6rem;
-  padding-right: 0.3rem;
-  line-height: .75;
 }
 
-.dropcap.short {
-  font-size: 3rem;
-}
-
-.dropcap.tall {
-  font-size: 8rem;
-}
-
-.dropcap.padded {
-  font-size: 3em;
-  padding: 0.1em 15% 15% 0.1em;  
-}
-
-@media (min-width: (@textWidth * 1.2)) {
-  .dropcap.pull-left { 
-    margin-left: -2rem;
-  }
-}
 
 
 
 // pullquote
 aside.pullquote {
-  max-width: @textWidth;
   color: @pullquoteColor;
   margin: 1rem auto;
   font-size: 1.5em;
@@ -116,9 +93,9 @@ aside.pullquote .attribution:before {
 }
 
 
+
 // sidebar
 aside.sidebar { 
-  max-width: @textWidth;
   margin: 1rem auto;
   padding: 0 0.8em;
   font-family: @headerFont; 
@@ -163,10 +140,7 @@ aside.sidebar {
 
 }
 
-
-
 ul, ol {
-  max-width: @textWidth;
   margin: 1rem auto;
 }
 
@@ -175,14 +149,32 @@ li {
 }
 
 
-aside.editors-note {
-  font-style: italic;
-  max-width: @textWidth;
-  margin: 1rem auto;
-}
+// Inline
+// ------
 
-figcaption {
+// dropcap
+.dropcap {
   font-family: @headerFont;
+  font-size: 4.6rem;
+  padding-right: 0.3rem;
+  line-height: .75;
 }
 
+.dropcap.short {
+  font-size: 3rem;
+}
 
+.dropcap.tall {
+  font-size: 8rem;
+}
+
+.dropcap.padded {
+  font-size: 3em;
+  padding: 0.1em 15% 15% 0.1em;  
+}
+
+@media (min-width: (@textWidth * 1.2)) {
+  .dropcap.pull-left { 
+    margin-left: -2rem;
+  }
+}

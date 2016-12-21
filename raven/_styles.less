@@ -1,19 +1,19 @@
 @import '../lib/index';
 
 html {
-  @media (max-width: 530px) { font-size: 15px; }
-  @media (max-width: 950px) { font-size: 16px; }
-  @media (max-width: 1130px) { font-size: 18px; }
-  @media (min-width: 1130px) { font-size: 20px; }
+  @media @mobile { font-size: 15px; }
+  @media @tablet { font-size: 16px; }
+  @media @laptop { font-size: 18px; }
+  @media @desktop { font-size: 20px; }
 }
 
 h1.hed {
   font-weight: normal;
-  font-size: 2.2em;
 }
 
 h1, h2, h3, h4, h5, h6 {
-  max-width: @textWidth;
+  width: @textWidth;
+  max-width: 100%;
   font-family: @headerFont;
   color: @headerFontColor;  
 }
@@ -27,19 +27,14 @@ p.dek {
   font-weight: 200;
 }
 
-p.intro,
-.intro p {
-  max-width: (@textWidth * .8);
+.intro {
+  width: (@textWidth * .8);
+  max-width: 100%;
   font-family: @headerFont;
 }
 
-// text on an image
-figure.dark-text {
-  color: red;
-}
 @supports (hyphens: auto) {
-  p.intro,
-  .intro p {
+  .intro {
     text-align: justify;
     hyphens: auto;
   }
@@ -111,7 +106,10 @@ blockquote {
   }
 }
 
-
+aside.editors-note {
+  font-style: italic;
+  margin: 1rem auto;
+}
 
 // pullquote
 aside.pullquote {
@@ -148,6 +146,11 @@ aside.sidebar {
   }
 }
 
+// text on an image
+figure.dark-text {
+  color: red;
+}
+
 
 @media @floatBreak {
 
@@ -180,20 +183,11 @@ aside.sidebar {
 
 
 ul, ol {
-  max-width: @textWidth;
   margin: 1rem auto;
 }
 
 li {
   margin: .5rem 0;
 }
-
-
-aside.editors-note {
-  font-style: italic;
-  max-width: @textWidth;
-  margin: 1rem auto;
-}
-
 
 
