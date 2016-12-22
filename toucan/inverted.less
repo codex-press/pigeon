@@ -1,0 +1,83 @@
+
+@import '_variables';
+
+@fontColor: hsl(10, 70%, 50%);
+@backgroundColor: hsl(10, 70%, 10%); 
+
+@captionColor: hsl(40, 30%, 45%);
+@photoCreditColor: hsl(40, 40%, 45%);
+@stripedTableColor: hsl(10, 70%, 20%);
+@selectionColor: yellow;
+
+@anchorColor: grey;
+@anchorHoverColor: hsl(0, 100%, 55%);
+@anchorVisitedColor: hsl(0, 100%, 25%);
+
+@codeBackgroundColor: white;
+
+// toucan
+
+@headerFontColor: hsl(300, 100%, 10%);
+
+@import '_styles';
+
+// the toucan beak
+
+h1.hed {
+  padding: .2em;
+  padding-right: 1em;
+  font-weight: initial;
+  border-radius: .2em 2em .2em .5em;
+  line-height: 1.2;
+  background-image: linear-gradient(120deg, 
+    hsl( 35, 80%, 50%), 
+    hsl( 40, 80%, 50%), 
+    hsl( 30, 80%, 50%), 
+    hsl(360, 100%, 40%)
+  );
+}
+
+a {
+  background: -webkit-linear-gradient(
+    hsl(360, 85%, 40%), 
+    hsl(360, 85%, 20%)
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+a:hover {
+  color: white;
+}
+
+code {
+  color: black;
+}
+
+// sidebar
+aside.sidebar { 
+  border: 0.4em solid hsl(280, 60%, 20%);
+  background-color: hsl(70, 80%, 70%);
+}
+
+blockquote {
+  color: hsl(280, 65%, 45%);
+  border-left: .3em dashed hsl(200, 100%, 40%);
+}
+
+.dropcap {
+  font-size: 2.35em;
+  border-radius: .2em;
+  color: white;
+  background-image: linear-gradient(-45deg, 
+    hsl(340, 100%, 60%),
+    hsl(240, 100%, 20%),
+    hsl(240, 100%, 20%),
+
+  );
+  line-height: .75;
+  padding: 0.5em;
+  text-shadow: 1px 1px 30px red;
+  margin-right: 0.2em; 
+}
+
