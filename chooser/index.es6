@@ -16,7 +16,7 @@ let colors = {
   owl: s('default celtic coldshoulder ebony'),
   heron: s('default lemon cherry cyan'),
   raven: s('default darkred wicked coward'),
-  toucan: ['default inverted'],
+  toucan: s('default inverted'),
 };
 
 article.ready.then(() => {
