@@ -1,6 +1,6 @@
 <p align="center">
   <a href="https://codex.press/docs/themes">
-    <img src="https://cdn.rawgit.com/codex-press/themes/6623c791961dd9a1aea5cc652b07db0e216d4d69/icons/heron.svg" width="230">
+    <img src="https://usercontent.codex.press/themes/icons/heron.svg" width="230">
    </a>
 </p>
 <h1 align=center>Codex Themes</h1>
