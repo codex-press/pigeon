@@ -1,12 +1,10 @@
-import dom from 'dom';
-import article from 'article';
-import * as u from 'utility';
+import { dom, article, utility as u } from '/app/index.js'
 
-import icons from '../icons/birds.js';
-import '../pigeon/index.es6';
-import '../owl/index.es6';
-import '../toucan/index.es6';
-import '../raven/index.es6';
+import icons from '../icons/birds.js'
+import '../pigeon/index.js'
+import '../owl/index.js'
+import '../toucan/index.js'
+import '../raven/index.js'
 
 let s = string => string.split(' ');
 

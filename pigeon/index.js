@@ -1,4 +1,4 @@
-import {typekit} from 'utility';
+import {typekit} from '/app/src/utility.js';
 
 // font-family: "stevie-sans", sans-serif;
 // 300, 400, 700

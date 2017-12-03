@@ -1,4 +1,4 @@
-import {typekit} from 'utility';
+import { typekit } from '/app/src/utility.js';
 
 // Caslon: regular, italic, bold
 // Essonnes Headline: regular, italic
